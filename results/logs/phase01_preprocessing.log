@@ -1,0 +1,264 @@
+2026-10-03 19:57:02 | ======================================================================
+2026-10-03 19:57:02 | RUN STARTED 2026-10-03 19:57:02 | phase01_preprocessing
+2026-10-03 19:57:02 | python 3.13.15 | pandas 2.2.3 | numpy 2.1.3 | machine: Linux-6.6.122+-x86_64-with-glibc2.39
+2026-10-03 19:57:02 | project root: /content/drive/MyDrive/Green_ML_Project
+2026-10-03 19:57:04 | VM files available: 1250
+2026-10-03 19:57:05 | Sampling seed: 42
+2026-10-03 19:57:05 | Main-group candidates loaded: 150
+2026-10-03 19:57:05 | Generalization-group candidates loaded: 150
+2026-10-03 19:57:05 | First 10 main-group VM IDs: [np.str_('932'), np.str_('630'), np.str_('741'), np.str_('422'), np.str_('1064'), np.str_('124'), np.str_('381'), np.str_('214'), np.str_('1085'), np.str_('185')]
+2026-10-03 19:57:05 | First 10 generalization VM IDs: [np.str_('1103'), np.str_('681'), np.str_('63'), np.str_('256'), np.str_('823'), np.str_('908'), np.str_('410'), np.str_('45'), np.str_('164'), np.str_('624')]
+2026-10-03 19:57:54 | Loaded 300 VM files, 2,663,335 rows, in 49.1 s
+2026-10-03 19:57:57 | --- DATA QUALITY BEFORE CLEANING ---
+2026-10-03 19:57:57 |                                           Check    Count  % of rows
+2026-10-03 19:57:57 | 0                                    Total rows  2663335        NaN
+2026-10-03 19:57:57 | 1                                    VMs loaded      300        NaN
+2026-10-03 19:57:57 | 2                  Duplicate rows (all columns)   103458      3.885
+2026-10-03 19:57:57 | 3            Duplicate (vm_id, timestamp) pairs   103511      3.887
+2026-10-03 19:57:57 | 4                         Missing: timestamp_ms        0      0.000
+2026-10-03 19:57:57 | 5                            Missing: cpu_cores        0      0.000
+2026-10-03 19:57:57 | 6         Missing: cpu_capacity_provisioned_mhz        0      0.000
+2026-10-03 19:57:57 | 7                        Missing: cpu_usage_mhz        0      0.000
+2026-10-03 19:57:57 | 8                        Missing: cpu_usage_pct        0      0.000
+2026-10-03 19:57:57 | 9                Missing: memory_provisioned_kb        0      0.000
+2026-10-03 19:57:57 | 10                     Missing: memory_usage_kb        0      0.000
+2026-10-03 19:57:57 | 11                      Missing: disk_read_kbps        0      0.000
+2026-10-03 19:57:57 | 12                     Missing: disk_write_kbps        0      0.000
+2026-10-03 19:57:57 | 13                   Missing: net_received_kbps        0      0.000
+2026-10-03 19:57:57 | 14                Missing: net_transmitted_kbps        0      0.000
+2026-10-03 19:57:57 | 15  Powered-off rows (cores = 0 and memory = 0)   368862     13.850
+2026-10-03 19:57:57 | 16                                     CPU% < 0        0      0.000
+2026-10-03 19:57:57 | 17                                   CPU% > 100    71762      2.694
+2026-10-03 19:57:57 | 18                        Negative memory usage        0      0.000
+2026-10-03 19:57:57 | 19                  Negative memory provisioned        0      0.000
+2026-10-03 19:57:57 | 20                   Memory usage > provisioned    13206      0.496
+2026-10-03 19:57:57 | 21                       Memory provisioned = 0   368865     13.850
+2026-10-03 19:57:57 | 22                CPU capacity provisioned <= 0   368944     13.853
+2026-10-03 19:57:57 | 23                 Negative disk/network values        0      0.000
+2026-10-03 19:57:58 | --- BASIC STATISTICS (raw) ---
+2026-10-03 19:57:58 |                                      count              mean            std               min               25%               50%               75%               max
+2026-10-03 19:57:58 | timestamp_ms                 2,663,335.000 1,377,665,547.070    748,624.195 1,376,314,846.000 1,377,019,926.000 1,377,701,285.000 1,378,316,642.000 1,378,906,798.000
+2026-10-03 19:57:58 | cpu_cores                    2,663,335.000             3.115          4.944             0.000             1.000             2.000             4.000            32.000
+2026-10-03 19:57:58 | cpu_capacity_provisioned_mhz 2,663,335.000         8,372.257     13,266.759             0.000         2,600.000         4,799.999        10,399.997        86,399.984
+2026-10-03 19:57:58 | cpu_usage_mhz                2,663,335.000         1,168.957      4,060.499             0.000             0.000            40.964           176.800        63,876.554
+2026-10-03 19:57:58 | cpu_usage_pct                2,663,335.000             7.168         21.362             0.000             0.000             0.933             2.000           108.500
+2026-10-03 19:57:58 | memory_provisioned_kb        2,663,335.000    13,542,023.762 51,921,599.505             0.000       171,104.000     3,133,440.000    15,463,424.000   536,309,760.000
+2026-10-03 19:57:58 | memory_usage_kb              2,663,335.000       521,664.934  1,803,627.558             0.000        11,184.800        67,806.133       234,878.400   402,653,184.000
+2026-10-03 19:57:58 | disk_read_kbps               2,663,335.000           407.182      4,988.194             0.000             0.000             0.000             0.000       736,528.482
+2026-10-03 19:57:58 | disk_write_kbps              2,663,335.000            31.307        522.198             0.000             0.067             1.200             9.933        68,116.133
+2026-10-03 19:57:58 | net_received_kbps            2,663,335.000            39.150        399.289             0.000             0.000             0.000             3.000        46,325.533
+2026-10-03 19:57:58 | net_transmitted_kbps         2,663,335.000            38.716        435.047             0.000             0.000             0.000             1.000        51,043.600
+2026-10-03 19:58:01 | Step 1: Remove duplicate rows                          2,663,335 ->  2,559,877 rows (103,458 removed) 
+2026-10-03 19:58:01 | Step 2: Remove duplicate (vm_id, timestamp)            2,559,877 ->  2,559,824 rows (53 removed) 
+2026-10-03 19:58:01 | Step 3: Drop rows missing CPU/memory/timestamp         2,559,824 ->  2,559,824 rows (0 removed) 
+2026-10-03 19:58:01 | Step 4: Fill missing disk/network with 0               2,559,824 ->  2,559,824 rows (0 removed) 0 cells filled
+2026-10-03 19:58:01 | Step 5: Exclude VMs powered off > 10% of time          2,559,824 ->  2,166,826 rows (392,998 removed) 35 VMs excluded
+2026-10-03 19:58:01 |    VMs excluded as mostly powered off: [9, 19, 61, 101, 184, 185, 189, 205, 210, 212, 214, 217, 355, 552, 608, 624, 625, 630, 632, 637, 645, 647, 649, 650, 651, 653, 667, 671, 756, 804, 1218, 1239, 1241, 1247, 1249]
+2026-10-03 19:58:01 | Step 6: Remove remaining powered-off rows              2,166,826 ->  2,166,101 rows (725 removed) 
+2026-10-03 19:58:01 | Step 7: Cap CPU% above 100 at 100                      2,166,101 ->  2,166,101 rows (0 removed) 32,131 values capped (1.48% of rows)
+2026-10-03 19:58:02 | Step 8: Remove other out-of-range values               2,166,101 ->  2,166,023 rows (78 removed) 
+2026-10-03 19:58:02 | Step 9: Exclude VMs with < 100 readings                2,166,023 ->  2,166,016 rows (7 removed) 1 VMs excluded [674]
+2026-10-03 19:58:02 | Time range: 2013-08-12 13:40:46  ->  2013-09-11 13:39:58
+2026-10-03 19:58:03 | --- SAMPLING INTERVAL CHECK ---
+2026-10-03 19:58:03 |                                Measure   Value
+2026-10-03 19:58:03 | 0                  Median interval (s) 300.000
+2026-10-03 19:58:03 | 1  Intervals within 300 s +/- 10 s (%)  99.869
+2026-10-03 19:58:03 | 2     Intervals longer than 10 min (%)   0.054
+2026-10-03 19:58:03 | 3                  Longest gap (hours)   0.583
+2026-10-03 19:58:04 | --- DATA QUALITY AFTER CLEANING ---
+2026-10-03 19:58:04 |                                           Check  Count
+2026-10-03 19:58:04 | 0            Duplicate (vm_id, timestamp) pairs      0
+2026-10-03 19:58:04 | 1                     Missing CPU/memory values      0
+2026-10-03 19:58:04 | 2                   Missing disk/network values      0
+2026-10-03 19:58:04 | 3   Powered-off rows (cores = 0 and memory = 0)      0
+2026-10-03 19:58:04 | 4                                      CPU% < 0      0
+2026-10-03 19:58:04 | 5                                    CPU% > 100      0
+2026-10-03 19:58:04 | 6                         Negative memory usage      0
+2026-10-03 19:58:04 | 7                   Negative memory provisioned      0
+2026-10-03 19:58:04 | 8                    Memory usage > provisioned      0
+2026-10-03 19:58:04 | 9                        Memory provisioned = 0      0
+2026-10-03 19:58:04 | 10                CPU capacity provisioned <= 0      0
+2026-10-03 19:58:04 | 11                 Negative disk/network values      0
+2026-10-03 19:58:05 | --- CLEANED DATASET OVERVIEW ---
+2026-10-03 19:58:05 |                        Group  VMs cleaned    Rows  Readings per VM (median)  Mean CPU %
+2026-10-03 19:58:05 | 0          Main (train/test)          100  812019                 8,616.000       6.574
+2026-10-03 19:58:05 | 1  Generalization (hold-out)          100  817478                 8,617.000       5.399
+2026-10-03 19:58:05 | Saved: /content/drive/MyDrive/Green_ML_Project/data/processed/cleaned_vms.parquet
+2026-10-03 19:58:05 | Saved: /content/drive/MyDrive/Green_ML_Project/data/processed/vm_selection.csv
+2026-10-03 19:58:05 | PHASE 1 COMPLETE
+2026-10-03 20:03:48 | ======================================================================
+2026-10-03 20:03:48 | RUN STARTED 2026-10-03 20:03:48 | phase01_preprocessing
+2026-10-03 20:03:48 | python 3.13.15 | pandas 2.2.3 | numpy 2.1.3 | machine: Linux-6.6.122+-x86_64-with-glibc2.39
+2026-10-03 20:03:48 | project root: /content/drive/MyDrive/Green_ML_Project
+2026-10-03 20:03:48 | VM files available: 1250
+2026-10-03 20:03:48 | Sampling seed: 42
+2026-10-03 20:03:48 | Main-group candidates loaded: 150
+2026-10-03 20:03:48 | Generalization-group candidates loaded: 150
+2026-10-03 20:03:48 | First 10 main-group VM IDs: [np.str_('932'), np.str_('630'), np.str_('741'), np.str_('422'), np.str_('1064'), np.str_('124'), np.str_('381'), np.str_('214'), np.str_('1085'), np.str_('185')]
+2026-10-03 20:03:48 | First 10 generalization VM IDs: [np.str_('1103'), np.str_('681'), np.str_('63'), np.str_('256'), np.str_('823'), np.str_('908'), np.str_('410'), np.str_('45'), np.str_('164'), np.str_('624')]
+2026-10-03 20:04:09 | Loaded 300 VM files, 2,663,335 rows, in 21.1 s
+2026-10-03 20:04:12 | --- DATA QUALITY BEFORE CLEANING ---
+2026-10-03 20:04:12 |                                           Check    Count  % of rows
+2026-10-03 20:04:12 | 0                                    Total rows  2663335        NaN
+2026-10-03 20:04:12 | 1                                    VMs loaded      300        NaN
+2026-10-03 20:04:12 | 2                  Duplicate rows (all columns)   103458      3.885
+2026-10-03 20:04:12 | 3            Duplicate (vm_id, timestamp) pairs   103511      3.887
+2026-10-03 20:04:12 | 4                         Missing: timestamp_ms        0      0.000
+2026-10-03 20:04:12 | 5                            Missing: cpu_cores        0      0.000
+2026-10-03 20:04:12 | 6         Missing: cpu_capacity_provisioned_mhz        0      0.000
+2026-10-03 20:04:12 | 7                        Missing: cpu_usage_mhz        0      0.000
+2026-10-03 20:04:12 | 8                        Missing: cpu_usage_pct        0      0.000
+2026-10-03 20:04:12 | 9                Missing: memory_provisioned_kb        0      0.000
+2026-10-03 20:04:12 | 10                     Missing: memory_usage_kb        0      0.000
+2026-10-03 20:04:12 | 11                      Missing: disk_read_kbps        0      0.000
+2026-10-03 20:04:12 | 12                     Missing: disk_write_kbps        0      0.000
+2026-10-03 20:04:12 | 13                   Missing: net_received_kbps        0      0.000
+2026-10-03 20:04:12 | 14                Missing: net_transmitted_kbps        0      0.000
+2026-10-03 20:04:12 | 15  Powered-off rows (cores = 0 and memory = 0)   368862     13.850
+2026-10-03 20:04:12 | 16                                     CPU% < 0        0      0.000
+2026-10-03 20:04:12 | 17                                   CPU% > 100    71762      2.694
+2026-10-03 20:04:12 | 18                        Negative memory usage        0      0.000
+2026-10-03 20:04:12 | 19                  Negative memory provisioned        0      0.000
+2026-10-03 20:04:12 | 20                   Memory usage > provisioned    13206      0.496
+2026-10-03 20:04:12 | 21                       Memory provisioned = 0   368865     13.850
+2026-10-03 20:04:12 | 22                CPU capacity provisioned <= 0   368944     13.853
+2026-10-03 20:04:12 | 23                 Negative disk/network values        0      0.000
+2026-10-03 20:04:13 | --- BASIC STATISTICS (raw) ---
+2026-10-03 20:04:13 |                                      count              mean            std               min               25%               50%               75%               max
+2026-10-03 20:04:13 | timestamp_ms                 2,663,335.000 1,377,665,547.070    748,624.195 1,376,314,846.000 1,377,019,926.000 1,377,701,285.000 1,378,316,642.000 1,378,906,798.000
+2026-10-03 20:04:13 | cpu_cores                    2,663,335.000             3.115          4.944             0.000             1.000             2.000             4.000            32.000
+2026-10-03 20:04:13 | cpu_capacity_provisioned_mhz 2,663,335.000         8,372.257     13,266.759             0.000         2,600.000         4,799.999        10,399.997        86,399.984
+2026-10-03 20:04:13 | cpu_usage_mhz                2,663,335.000         1,168.957      4,060.499             0.000             0.000            40.964           176.800        63,876.554
+2026-10-03 20:04:13 | cpu_usage_pct                2,663,335.000             7.168         21.362             0.000             0.000             0.933             2.000           108.500
+2026-10-03 20:04:13 | memory_provisioned_kb        2,663,335.000    13,542,023.762 51,921,599.505             0.000       171,104.000     3,133,440.000    15,463,424.000   536,309,760.000
+2026-10-03 20:04:13 | memory_usage_kb              2,663,335.000       521,664.934  1,803,627.558             0.000        11,184.800        67,806.133       234,878.400   402,653,184.000
+2026-10-03 20:04:13 | disk_read_kbps               2,663,335.000           407.182      4,988.194             0.000             0.000             0.000             0.000       736,528.482
+2026-10-03 20:04:13 | disk_write_kbps              2,663,335.000            31.307        522.198             0.000             0.067             1.200             9.933        68,116.133
+2026-10-03 20:04:13 | net_received_kbps            2,663,335.000            39.150        399.289             0.000             0.000             0.000             3.000        46,325.533
+2026-10-03 20:04:13 | net_transmitted_kbps         2,663,335.000            38.716        435.047             0.000             0.000             0.000             1.000        51,043.600
+2026-10-03 20:04:16 | Step 1: Remove duplicate rows                          2,663,335 ->  2,559,877 rows (103,458 removed) 
+2026-10-03 20:04:16 | Step 2: Remove duplicate (vm_id, timestamp)            2,559,877 ->  2,559,824 rows (53 removed) 
+2026-10-03 20:04:16 | Step 3: Drop rows missing CPU/memory/timestamp         2,559,824 ->  2,559,824 rows (0 removed) 
+2026-10-03 20:04:16 | Step 4: Fill missing disk/network with 0               2,559,824 ->  2,559,824 rows (0 removed) 0 cells filled
+2026-10-03 20:04:17 | Step 5: Exclude VMs powered off > 10% of time          2,559,824 ->  2,166,826 rows (392,998 removed) 35 VMs excluded
+2026-10-03 20:04:17 |    VMs excluded as mostly powered off: [9, 19, 61, 101, 184, 185, 189, 205, 210, 212, 214, 217, 355, 552, 608, 624, 625, 630, 632, 637, 645, 647, 649, 650, 651, 653, 667, 671, 756, 804, 1218, 1239, 1241, 1247, 1249]
+2026-10-03 20:04:17 | Step 6: Remove remaining powered-off rows              2,166,826 ->  2,166,101 rows (725 removed) 
+2026-10-03 20:04:17 | Step 7: Cap CPU% above 100 at 100                      2,166,101 ->  2,166,101 rows (0 removed) 32,131 values capped (1.48% of rows)
+2026-10-03 20:04:17 | Step 8: Remove other out-of-range values               2,166,101 ->  2,166,023 rows (78 removed) 
+2026-10-03 20:04:17 | Step 9: Exclude VMs with < 100 readings                2,166,023 ->  2,166,016 rows (7 removed) 1 VMs excluded [674]
+2026-10-03 20:04:18 | Time range: 2013-08-12 13:40:46  ->  2013-09-11 13:39:58
+2026-10-03 20:04:18 | --- SAMPLING INTERVAL CHECK ---
+2026-10-03 20:04:18 |                                Measure   Value
+2026-10-03 20:04:18 | 0                  Median interval (s) 300.000
+2026-10-03 20:04:18 | 1  Intervals within 300 s +/- 10 s (%)  99.869
+2026-10-03 20:04:18 | 2     Intervals longer than 10 min (%)   0.054
+2026-10-03 20:04:18 | 3                  Longest gap (hours)   0.583
+2026-10-03 20:04:19 | --- DATA QUALITY AFTER CLEANING ---
+2026-10-03 20:04:19 |                                           Check  Count
+2026-10-03 20:04:19 | 0            Duplicate (vm_id, timestamp) pairs      0
+2026-10-03 20:04:19 | 1                     Missing CPU/memory values      0
+2026-10-03 20:04:19 | 2                   Missing disk/network values      0
+2026-10-03 20:04:19 | 3   Powered-off rows (cores = 0 and memory = 0)      0
+2026-10-03 20:04:19 | 4                                      CPU% < 0      0
+2026-10-03 20:04:19 | 5                                    CPU% > 100      0
+2026-10-03 20:04:19 | 6                         Negative memory usage      0
+2026-10-03 20:04:19 | 7                   Negative memory provisioned      0
+2026-10-03 20:04:19 | 8                    Memory usage > provisioned      0
+2026-10-03 20:04:19 | 9                        Memory provisioned = 0      0
+2026-10-03 20:04:19 | 10                CPU capacity provisioned <= 0      0
+2026-10-03 20:04:19 | 11                 Negative disk/network values      0
+2026-10-03 20:04:21 | --- CLEANED DATASET OVERVIEW ---
+2026-10-03 20:04:21 |                        Group  VMs cleaned    Rows  Readings per VM (median)  Mean CPU %
+2026-10-03 20:04:21 | 0          Main (train/test)          100  812019                 8,616.000       6.574
+2026-10-03 20:04:21 | 1  Generalization (hold-out)          100  817478                 8,617.000       5.399
+2026-10-03 20:04:21 | Saved: /content/drive/MyDrive/Green_ML_Project/data/processed/cleaned_vms.parquet
+2026-10-03 20:04:21 | Saved: /content/drive/MyDrive/Green_ML_Project/data/processed/vm_selection.csv
+2026-10-03 20:04:21 | PHASE 1 COMPLETE
+2026-10-03 20:04:46 | ======================================================================
+2026-10-03 20:04:46 | RUN STARTED 2026-10-03 20:04:46 | phase01_preprocessing
+2026-10-03 20:04:46 | python 3.13.15 | pandas 2.2.3 | numpy 2.1.3 | machine: Linux-6.6.122+-x86_64-with-glibc2.39
+2026-10-03 20:04:46 | project root: /content/drive/MyDrive/Green_ML_Project
+2026-10-03 20:04:46 | VM files available: 1250
+2026-10-03 20:04:46 | Sampling seed: 42
+2026-10-03 20:04:46 | Main-group candidates loaded: 150
+2026-10-03 20:04:46 | Generalization-group candidates loaded: 150
+2026-10-03 20:04:46 | First 10 main-group VM IDs: [np.str_('932'), np.str_('630'), np.str_('741'), np.str_('422'), np.str_('1064'), np.str_('124'), np.str_('381'), np.str_('214'), np.str_('1085'), np.str_('185')]
+2026-10-03 20:04:46 | First 10 generalization VM IDs: [np.str_('1103'), np.str_('681'), np.str_('63'), np.str_('256'), np.str_('823'), np.str_('908'), np.str_('410'), np.str_('45'), np.str_('164'), np.str_('624')]
+2026-10-03 20:05:09 | Loaded 300 VM files, 2,663,335 rows, in 22.8 s
+2026-10-03 20:05:11 | --- DATA QUALITY BEFORE CLEANING ---
+2026-10-03 20:05:11 |                                           Check    Count  % of rows
+2026-10-03 20:05:11 | 0                                    Total rows  2663335        NaN
+2026-10-03 20:05:11 | 1                                    VMs loaded      300        NaN
+2026-10-03 20:05:11 | 2                  Duplicate rows (all columns)   103458      3.885
+2026-10-03 20:05:11 | 3            Duplicate (vm_id, timestamp) pairs   103511      3.887
+2026-10-03 20:05:11 | 4                         Missing: timestamp_ms        0      0.000
+2026-10-03 20:05:11 | 5                            Missing: cpu_cores        0      0.000
+2026-10-03 20:05:11 | 6         Missing: cpu_capacity_provisioned_mhz        0      0.000
+2026-10-03 20:05:11 | 7                        Missing: cpu_usage_mhz        0      0.000
+2026-10-03 20:05:11 | 8                        Missing: cpu_usage_pct        0      0.000
+2026-10-03 20:05:11 | 9                Missing: memory_provisioned_kb        0      0.000
+2026-10-03 20:05:11 | 10                     Missing: memory_usage_kb        0      0.000
+2026-10-03 20:05:11 | 11                      Missing: disk_read_kbps        0      0.000
+2026-10-03 20:05:11 | 12                     Missing: disk_write_kbps        0      0.000
+2026-10-03 20:05:11 | 13                   Missing: net_received_kbps        0      0.000
+2026-10-03 20:05:11 | 14                Missing: net_transmitted_kbps        0      0.000
+2026-10-03 20:05:11 | 15  Powered-off rows (cores = 0 and memory = 0)   368862     13.850
+2026-10-03 20:05:11 | 16                                     CPU% < 0        0      0.000
+2026-10-03 20:05:11 | 17                                   CPU% > 100    71762      2.694
+2026-10-03 20:05:12 | 18                        Negative memory usage        0      0.000
+2026-10-03 20:05:12 | 19                  Negative memory provisioned        0      0.000
+2026-10-03 20:05:12 | 20                   Memory usage > provisioned    13206      0.496
+2026-10-03 20:05:12 | 21                       Memory provisioned = 0   368865     13.850
+2026-10-03 20:05:12 | 22                CPU capacity provisioned <= 0   368944     13.853
+2026-10-03 20:05:12 | 23                 Negative disk/network values        0      0.000
+2026-10-03 20:05:13 | --- BASIC STATISTICS (raw) ---
+2026-10-03 20:05:13 |                                      count              mean            std               min               25%               50%               75%               max
+2026-10-03 20:05:13 | timestamp_ms                 2,663,335.000 1,377,665,547.070    748,624.195 1,376,314,846.000 1,377,019,926.000 1,377,701,285.000 1,378,316,642.000 1,378,906,798.000
+2026-10-03 20:05:13 | cpu_cores                    2,663,335.000             3.115          4.944             0.000             1.000             2.000             4.000            32.000
+2026-10-03 20:05:13 | cpu_capacity_provisioned_mhz 2,663,335.000         8,372.257     13,266.759             0.000         2,600.000         4,799.999        10,399.997        86,399.984
+2026-10-03 20:05:13 | cpu_usage_mhz                2,663,335.000         1,168.957      4,060.499             0.000             0.000            40.964           176.800        63,876.554
+2026-10-03 20:05:13 | cpu_usage_pct                2,663,335.000             7.168         21.362             0.000             0.000             0.933             2.000           108.500
+2026-10-03 20:05:13 | memory_provisioned_kb        2,663,335.000    13,542,023.762 51,921,599.505             0.000       171,104.000     3,133,440.000    15,463,424.000   536,309,760.000
+2026-10-03 20:05:13 | memory_usage_kb              2,663,335.000       521,664.934  1,803,627.558             0.000        11,184.800        67,806.133       234,878.400   402,653,184.000
+2026-10-03 20:05:13 | disk_read_kbps               2,663,335.000           407.182      4,988.194             0.000             0.000             0.000             0.000       736,528.482
+2026-10-03 20:05:13 | disk_write_kbps              2,663,335.000            31.307        522.198             0.000             0.067             1.200             9.933        68,116.133
+2026-10-03 20:05:13 | net_received_kbps            2,663,335.000            39.150        399.289             0.000             0.000             0.000             3.000        46,325.533
+2026-10-03 20:05:13 | net_transmitted_kbps         2,663,335.000            38.716        435.047             0.000             0.000             0.000             1.000        51,043.600
+2026-10-03 20:05:15 | Step 1: Remove duplicate rows                          2,663,335 ->  2,559,877 rows (103,458 removed) 
+2026-10-03 20:05:15 | Step 2: Remove duplicate (vm_id, timestamp)            2,559,877 ->  2,559,824 rows (53 removed) 
+2026-10-03 20:05:16 | Step 3: Drop rows missing CPU/memory/timestamp         2,559,824 ->  2,559,824 rows (0 removed) 
+2026-10-03 20:05:16 | Step 4: Fill missing disk/network with 0               2,559,824 ->  2,559,824 rows (0 removed) 0 cells filled
+2026-10-03 20:05:16 | Step 5: Exclude VMs powered off > 10% of time          2,559,824 ->  2,166,826 rows (392,998 removed) 35 VMs excluded
+2026-10-03 20:05:16 |    VMs excluded as mostly powered off: [9, 19, 61, 101, 184, 185, 189, 205, 210, 212, 214, 217, 355, 552, 608, 624, 625, 630, 632, 637, 645, 647, 649, 650, 651, 653, 667, 671, 756, 804, 1218, 1239, 1241, 1247, 1249]
+2026-10-03 20:05:16 | Step 6: Remove remaining powered-off rows              2,166,826 ->  2,166,101 rows (725 removed) 
+2026-10-03 20:05:16 | Step 7: Cap CPU% above 100 at 100                      2,166,101 ->  2,166,101 rows (0 removed) 32,131 values capped (1.48% of rows)
+2026-10-03 20:05:16 | Step 8: Remove other out-of-range values               2,166,101 ->  2,166,023 rows (78 removed) 
+2026-10-03 20:05:17 | Step 9: Exclude VMs with < 100 readings                2,166,023 ->  2,166,016 rows (7 removed) 1 VMs excluded [674]
+2026-10-03 20:05:17 | Time range: 2013-08-12 13:40:46  ->  2013-09-11 13:39:58
+2026-10-03 20:05:17 | --- SAMPLING INTERVAL CHECK ---
+2026-10-03 20:05:17 |                                Measure   Value
+2026-10-03 20:05:17 | 0                  Median interval (s) 300.000
+2026-10-03 20:05:17 | 1  Intervals within 300 s +/- 10 s (%)  99.869
+2026-10-03 20:05:17 | 2     Intervals longer than 10 min (%)   0.054
+2026-10-03 20:05:17 | 3                  Longest gap (hours)   0.583
+2026-10-03 20:05:18 | --- DATA QUALITY AFTER CLEANING ---
+2026-10-03 20:05:18 |                                           Check  Count
+2026-10-03 20:05:18 | 0            Duplicate (vm_id, timestamp) pairs      0
+2026-10-03 20:05:18 | 1                     Missing CPU/memory values      0
+2026-10-03 20:05:18 | 2                   Missing disk/network values      0
+2026-10-03 20:05:18 | 3   Powered-off rows (cores = 0 and memory = 0)      0
+2026-10-03 20:05:18 | 4                                      CPU% < 0      0
+2026-10-03 20:05:18 | 5                                    CPU% > 100      0
+2026-10-03 20:05:18 | 6                         Negative memory usage      0
+2026-10-03 20:05:18 | 7                   Negative memory provisioned      0
+2026-10-03 20:05:18 | 8                    Memory usage > provisioned      0
+2026-10-03 20:05:18 | 9                        Memory provisioned = 0      0
+2026-10-03 20:05:18 | 10                CPU capacity provisioned <= 0      0
+2026-10-03 20:05:18 | 11                 Negative disk/network values      0
+2026-10-03 20:05:20 | --- CLEANED DATASET OVERVIEW ---
+2026-10-03 20:05:20 |                        Group  VMs cleaned    Rows  Readings per VM (median)  Mean CPU %
+2026-10-03 20:05:20 | 0          Main (train/test)          100  812019                 8,616.000       6.574
+2026-10-03 20:05:20 | 1  Generalization (hold-out)          100  817478                 8,617.000       5.399
+2026-10-03 20:05:20 | Saved: /content/drive/MyDrive/Green_ML_Project/data/processed/cleaned_vms.parquet
+2026-10-03 20:05:20 | Saved: /content/drive/MyDrive/Green_ML_Project/data/processed/vm_selection.csv
+2026-10-03 20:05:20 | PHASE 1 COMPLETE

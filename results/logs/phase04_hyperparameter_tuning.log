@@ -1,0 +1,132 @@
+2026-10-04 05:25:14 | ======================================================================
+2026-10-04 05:25:14 | RUN STARTED 2026-10-04 05:25:14 | phase04_hyperparameter_tuning
+2026-10-04 05:25:14 | python 3.13.15 | pandas 2.2.3 | numpy 2.1.3 | machine: Linux-6.6.122+-x86_64-with-glibc2.39
+2026-10-04 05:25:14 | project root: /content/drive/MyDrive/Green_ML_Project
+2026-10-04 05:25:14 | CPU cores: 2 | CV: TimeSeriesSplit(3) | scoring: RMSE | FORCE_RERUN = False
+2026-10-04 05:25:14 | Decision Tree: 12 settings -> {'max_depth': [5, 10, 15, None], 'min_samples_split': [2, 10, 50]}
+2026-10-04 05:25:14 | Random Forest: 5 settings -> [{'n_estimators': [50], 'max_depth': [10, 20, None]}, {'n_estimators': [100], 'max_depth': [10, 20]}]
+2026-10-04 05:25:14 | XGBoost: 12 settings -> {'n_estimators': [100, 300], 'max_depth': [4, 6, 8], 'learning_rate': [0.05, 0.1]}
+2026-10-04 05:25:14 | LightGBM: 12 settings -> {'n_estimators': [100, 300], 'max_depth': [4, 8, -1], 'learning_rate': [0.05, 0.1]}
+2026-10-04 05:25:14 | LSTM: 4 settings -> [{'hidden_size': 32, 'seq_len': 6}, {'hidden_size': 32, 'seq_len': 12}, {'hidden_size': 64, 'seq_len': 6}, {'hidden_size': 64, 'seq_len': 12}]
+2026-10-04 05:25:18 | Fold 1: train 80,281 rows (08-12 .. 08-18 19:41) -> validate 80,278 rows (08-18 19:41 .. 08-24)
+2026-10-04 05:25:18 | Fold 2: train 160,559 rows (08-12 .. 08-24 21:22) -> validate 80,278 rows (08-24 21:22 .. 08-30)
+2026-10-04 05:25:18 | Fold 3: train 240,837 rows (08-12 .. 08-30 22:33) -> validate 80,278 rows (08-30 22:38 .. 09-10)
+2026-10-04 05:25:18 | Decision Tree: searching 12 settings x 3 folds ...
+2026-10-04 05:27:16 | --- Decision Tree: all settings (CV RMSE, lower is better) ---
+2026-10-04 05:27:16 |                                           params  std_test_score  mean_fit_time  rank_test_score  mean_cv_rmse
+2026-10-04 05:27:16 | 1      {'max_depth': 5, 'min_samples_split': 10}        1.035278       1.024431                1      3.844841
+2026-10-04 05:27:16 | 2      {'max_depth': 5, 'min_samples_split': 50}        1.031372       1.041027                2      3.850460
+2026-10-04 05:27:16 | 0       {'max_depth': 5, 'min_samples_split': 2}        1.048964       1.034496                3      3.855552
+2026-10-04 05:27:16 | 5     {'max_depth': 10, 'min_samples_split': 50}        0.704712       2.469968                4      3.860422
+2026-10-04 05:27:16 | 8     {'max_depth': 15, 'min_samples_split': 50}        0.720192       3.158212                5      4.003583
+2026-10-04 05:27:16 | 11  {'max_depth': None, 'min_samples_split': 50}        0.709011       5.530396                6      4.050364
+2026-10-04 05:27:16 | 4     {'max_depth': 10, 'min_samples_split': 10}        0.854527       1.938383                7      4.117281
+2026-10-04 05:27:16 | 3      {'max_depth': 10, 'min_samples_split': 2}        0.860136       2.426335                8      4.165110
+2026-10-04 05:27:16 | 7     {'max_depth': 15, 'min_samples_split': 10}        0.935199       3.285140                9      4.632607
+2026-10-04 05:27:16 | 6      {'max_depth': 15, 'min_samples_split': 2}        1.014689       2.799644               10      4.700268
+2026-10-04 05:27:16 | 10  {'max_depth': None, 'min_samples_split': 10}        0.876279       6.079353               11      4.765951
+2026-10-04 05:27:16 | 9    {'max_depth': None, 'min_samples_split': 2}        1.041777       6.870599               12      5.052810
+2026-10-04 05:27:16 | Decision Tree: best {'max_depth': 5, 'min_samples_split': 10} | CV RMSE 3.8448 | test MAE 1.0502 RMSE 4.3561 R2 0.9156 | tuning 1.9 min | refit 3.0s
+2026-10-04 05:27:16 | Random Forest: searching 5 settings x 3 folds ...
+2026-10-04 06:04:18 | --- Random Forest: all settings (CV RMSE, lower is better) ---
+2026-10-04 06:04:18 |                                     params  std_test_score  mean_fit_time  rank_test_score  mean_cv_rmse
+2026-10-04 06:04:18 | 3   {'max_depth': 10, 'n_estimators': 100}        0.641668     113.038494                1      2.989299
+2026-10-04 06:04:18 | 0    {'max_depth': 10, 'n_estimators': 50}        0.616260      55.738815                2      2.990942
+2026-10-04 06:04:18 | 4   {'max_depth': 20, 'n_estimators': 100}        0.595253     211.477024                3      3.048521
+2026-10-04 06:04:18 | 1    {'max_depth': 20, 'n_estimators': 50}        0.576841     105.705743                4      3.059809
+2026-10-04 06:04:18 | 2  {'max_depth': None, 'n_estimators': 50}        0.574325     173.184836                5      3.062923
+2026-10-04 06:04:19 | Random Forest: best {'max_depth': 10, 'n_estimators': 100} | CV RMSE 2.9893 | test MAE 0.6966 RMSE 3.7493 R2 0.9374 | tuning 37.0 min | refit 233.0s
+2026-10-04 06:04:19 | XGBoost: searching 12 settings x 3 folds ...
+2026-10-04 06:07:07 | --- XGBoost: all settings (CV RMSE, lower is better) ---
+2026-10-04 06:07:07 |                                                           params  std_test_score  mean_fit_time  rank_test_score  mean_cv_rmse
+2026-10-04 06:07:07 | 7    {'learning_rate': 0.1, 'max_depth': 4, 'n_estimators': 300}        0.599999       3.724049                1      3.012569
+2026-10-04 06:07:07 | 3   {'learning_rate': 0.05, 'max_depth': 6, 'n_estimators': 300}        0.596211       4.993464                2      3.027895
+2026-10-04 06:07:07 | 8    {'learning_rate': 0.1, 'max_depth': 6, 'n_estimators': 100}        0.575921       1.890157                3      3.028198
+2026-10-04 06:07:07 | 1   {'learning_rate': 0.05, 'max_depth': 4, 'n_estimators': 300}        0.591167       3.475329                4      3.049976
+2026-10-04 06:07:07 | 9    {'learning_rate': 0.1, 'max_depth': 6, 'n_estimators': 300}        0.585325       5.057472                5      3.054891
+2026-10-04 06:07:07 | 6    {'learning_rate': 0.1, 'max_depth': 4, 'n_estimators': 100}        0.614407       1.591020                6      3.056215
+2026-10-04 06:07:07 | 2   {'learning_rate': 0.05, 'max_depth': 6, 'n_estimators': 100}        0.600632       2.432692                7      3.068382
+2026-10-04 06:07:07 | 4   {'learning_rate': 0.05, 'max_depth': 8, 'n_estimators': 100}        0.618594       3.755559                8      3.098113
+2026-10-04 06:07:07 | 5   {'learning_rate': 0.05, 'max_depth': 8, 'n_estimators': 300}        0.621346       8.389359                9      3.104009
+2026-10-04 06:07:07 | 10   {'learning_rate': 0.1, 'max_depth': 8, 'n_estimators': 100}        0.623394       3.476724               10      3.105349
+2026-10-04 06:07:07 | 11   {'learning_rate': 0.1, 'max_depth': 8, 'n_estimators': 300}        0.620821       8.765138               11      3.135064
+2026-10-04 06:07:07 | 0   {'learning_rate': 0.05, 'max_depth': 4, 'n_estimators': 100}        0.595578       1.709132               12      3.135616
+2026-10-04 06:07:07 | XGBoost: best {'learning_rate': 0.1, 'max_depth': 4, 'n_estimators': 300} | CV RMSE 3.0126 | test MAE 0.6974 RMSE 3.7151 R2 0.9386 | tuning 2.8 min | refit 5.7s
+2026-10-04 06:07:07 | LightGBM: searching 12 settings x 3 folds ...
+2026-10-04 06:09:35 | --- LightGBM: all settings (CV RMSE, lower is better) ---
+2026-10-04 06:09:36 |                                                            params  std_test_score  mean_fit_time  rank_test_score  mean_cv_rmse
+2026-10-04 06:09:36 | 5   {'learning_rate': 0.05, 'max_depth': -1, 'n_estimators': 300}        0.576911       4.704562                1      2.895055
+2026-10-04 06:09:36 | 3    {'learning_rate': 0.05, 'max_depth': 8, 'n_estimators': 300}        0.588990       5.169027                2      2.918229
+2026-10-04 06:09:36 | 10   {'learning_rate': 0.1, 'max_depth': -1, 'n_estimators': 100}        0.605259       1.533036                3      2.936816
+2026-10-04 06:09:36 | 11   {'learning_rate': 0.1, 'max_depth': -1, 'n_estimators': 300}        0.628425       4.744084                4      2.938449
+2026-10-04 06:09:36 | 8     {'learning_rate': 0.1, 'max_depth': 8, 'n_estimators': 100}        0.631000       2.615547                5      2.949670
+2026-10-04 06:09:36 | 9     {'learning_rate': 0.1, 'max_depth': 8, 'n_estimators': 300}        0.636057       4.444786                6      2.957709
+2026-10-04 06:09:36 | 4   {'learning_rate': 0.05, 'max_depth': -1, 'n_estimators': 100}        0.592255       2.356140                7      2.963472
+2026-10-04 06:09:36 | 2    {'learning_rate': 0.05, 'max_depth': 8, 'n_estimators': 100}        0.610657       1.601567                8      2.972626
+2026-10-04 06:09:36 | 7     {'learning_rate': 0.1, 'max_depth': 4, 'n_estimators': 300}        0.632124       3.999028                9      2.977188
+2026-10-04 06:09:36 | 6     {'learning_rate': 0.1, 'max_depth': 4, 'n_estimators': 100}        0.627447       1.727759               10      2.990029
+2026-10-04 06:09:36 | 1    {'learning_rate': 0.05, 'max_depth': 4, 'n_estimators': 300}        0.648531       4.389066               11      2.990694
+2026-10-04 06:09:36 | 0    {'learning_rate': 0.05, 'max_depth': 4, 'n_estimators': 100}        0.656694       1.689772               12      3.066352
+2026-10-04 06:09:36 | LightGBM: best {'learning_rate': 0.05, 'max_depth': -1, 'n_estimators': 300} | CV RMSE 2.8951 | test MAE 0.6640 RMSE 3.6507 R2 0.9407 | tuning 2.4 min | refit 9.1s
+2026-10-04 06:09:36 | LSTM h32_s6: hidden=32, history=6 readings, 288,736 training windows
+2026-10-04 06:09:51 |   epoch  1: train_mse=0.00372 val_mse=0.00087 (7.8s)
+2026-10-04 06:10:02 |   epoch  2: train_mse=0.00169 val_mse=0.00080 (10.5s)
+2026-10-04 06:10:08 |   epoch  3: train_mse=0.00163 val_mse=0.00080 (6.6s)
+2026-10-04 06:10:19 |   epoch  4: train_mse=0.00162 val_mse=0.00085 (10.4s)
+2026-10-04 06:10:26 |   epoch  5: train_mse=0.00160 val_mse=0.00079 (6.9s)
+2026-10-04 06:10:36 |   epoch  6: train_mse=0.00159 val_mse=0.00083 (10.0s)
+2026-10-04 06:10:46 |   epoch  7: train_mse=0.00158 val_mse=0.00081 (10.3s)
+2026-10-04 06:10:52 |   epoch  8: train_mse=0.00156 val_mse=0.00079 (6.4s)
+2026-10-04 06:10:52 |   early stop at epoch 8 (best val_mse=0.00079)
+2026-10-04 06:10:52 | LSTM h32_s6: validation RMSE 2.8066 | 76.3s, 8 epochs
+2026-10-04 06:10:53 | LSTM h32_s12: hidden=32, history=12 readings, 288,436 training windows
+2026-10-04 06:11:07 |   epoch  1: train_mse=0.00370 val_mse=0.00100 (14.4s)
+2026-10-04 06:11:22 |   epoch  2: train_mse=0.00167 val_mse=0.00080 (14.4s)
+2026-10-04 06:11:36 |   epoch  3: train_mse=0.00161 val_mse=0.00081 (14.4s)
+2026-10-04 06:11:50 |   epoch  4: train_mse=0.00159 val_mse=0.00081 (14.3s)
+2026-10-04 06:12:05 |   epoch  5: train_mse=0.00158 val_mse=0.00078 (14.3s)
+2026-10-04 06:12:19 |   epoch  6: train_mse=0.00157 val_mse=0.00080 (14.4s)
+2026-10-04 06:12:33 |   epoch  7: train_mse=0.00155 val_mse=0.00080 (14.3s)
+2026-10-04 06:12:48 |   epoch  8: train_mse=0.00154 val_mse=0.00078 (14.2s)
+2026-10-04 06:13:02 |   epoch  9: train_mse=0.00152 val_mse=0.00080 (14.2s)
+2026-10-04 06:13:16 |   epoch 10: train_mse=0.00151 val_mse=0.00081 (14.4s)
+2026-10-04 06:13:31 |   epoch 11: train_mse=0.00149 val_mse=0.00080 (14.2s)
+2026-10-04 06:13:31 |   early stop at epoch 11 (best val_mse=0.00078)
+2026-10-04 06:13:31 | LSTM h32_s12: validation RMSE 2.7929 | 157.6s, 11 epochs
+2026-10-04 06:13:31 | LSTM h64_s6: hidden=64, history=6 readings, 288,736 training windows
+2026-10-04 06:13:47 |   epoch  1: train_mse=0.00341 val_mse=0.00083 (15.8s)
+2026-10-04 06:14:03 |   epoch  2: train_mse=0.00166 val_mse=0.00080 (15.8s)
+2026-10-04 06:14:19 |   epoch  3: train_mse=0.00162 val_mse=0.00079 (15.9s)
+2026-10-04 06:14:34 |   epoch  4: train_mse=0.00160 val_mse=0.00083 (15.8s)
+2026-10-04 06:14:50 |   epoch  5: train_mse=0.00157 val_mse=0.00080 (15.7s)
+2026-10-04 06:15:06 |   epoch  6: train_mse=0.00156 val_mse=0.00084 (15.6s)
+2026-10-04 06:15:06 |   early stop at epoch 6 (best val_mse=0.00079)
+2026-10-04 06:15:06 | LSTM h64_s6: validation RMSE 2.8151 | 94.6s, 6 epochs
+2026-10-04 06:15:06 | LSTM h64_s12: hidden=64, history=12 readings, 288,436 training windows
+2026-10-04 06:15:35 |   epoch  1: train_mse=0.00338 val_mse=0.00095 (28.7s)
+2026-10-04 06:16:04 |   epoch  2: train_mse=0.00163 val_mse=0.00079 (28.7s)
+2026-10-04 06:16:32 |   epoch  3: train_mse=0.00161 val_mse=0.00084 (28.8s)
+2026-10-04 06:17:01 |   epoch  4: train_mse=0.00159 val_mse=0.00081 (28.9s)
+2026-10-04 06:17:30 |   epoch  5: train_mse=0.00156 val_mse=0.00078 (28.8s)
+2026-10-04 06:17:58 |   epoch  6: train_mse=0.00154 val_mse=0.00078 (27.6s)
+2026-10-04 06:18:24 |   epoch  7: train_mse=0.00151 val_mse=0.00079 (25.9s)
+2026-10-04 06:18:53 |   epoch  8: train_mse=0.00149 val_mse=0.00079 (28.8s)
+2026-10-04 06:18:53 |   early stop at epoch 8 (best val_mse=0.00078)
+2026-10-04 06:18:53 | LSTM h64_s12: validation RMSE 2.7992 | 226.4s, 8 epochs
+2026-10-04 06:18:53 | --- LSTM: all settings (validation RMSE, lower is better) ---
+2026-10-04 06:18:53 |          hidden_size  seq_len  val_rmse  train_time_sec  epochs_run
+2026-10-04 06:18:53 | h32_s12           32       12  2.792874      157.592609          11
+2026-10-04 06:18:53 | h64_s12           64       12  2.799186      226.396807           8
+2026-10-04 06:18:53 | h32_s6            32        6  2.806561       76.297169           8
+2026-10-04 06:18:53 | h64_s6            64        6  2.815081       94.637838           6
+2026-10-04 06:18:54 | LSTM: best {'hidden_size': 32, 'seq_len': 12} | test MAE 0.9238 RMSE 4.4939 R2 0.9101 | tuning 9.2 min
+2026-10-04 06:18:54 | --- DEFAULT vs TUNED (test set) ---
+2026-10-04 06:18:54 |                Model  Default MAE  Tuned MAE  Default RMSE  Tuned RMSE  Default R2  Tuned R2  Δ MAE %  Default train (s)  Tuned train (s)  Tuning time (min)                                                  Best settings
+2026-10-04 06:18:54 | 0  Linear Regression       0.9032     0.9032        4.5899      4.5899      0.9062    0.9062   0.0000             0.3352           0.3352             0.0000                                      none (no hyperparameters)
+2026-10-04 06:18:54 | 1      Decision Tree       0.8468     1.0502        5.2473      4.3561      0.8775    0.9156  24.0242            11.4586           2.9743             1.9442                      {"max_depth": 5, "min_samples_split": 10}
+2026-10-04 06:18:54 | 2      Random Forest       0.6903     0.6966        3.6853      3.7493      0.9396    0.9374   0.9035           611.5020         233.0275            37.0259                         {"max_depth": 10, "n_estimators": 100}
+2026-10-04 06:18:54 | 3            XGBoost       0.7007     0.6974        3.7376      3.7151      0.9378    0.9386  -0.4693             3.1828           5.6702             2.7904    {"learning_rate": 0.1, "max_depth": 4, "n_estimators": 300}
+2026-10-04 06:18:54 | 4           LightGBM       0.6743     0.6640        3.7123      3.6507      0.9387    0.9407  -1.5223             2.3208           9.1493             2.3874  {"learning_rate": 0.05, "max_depth": -1, "n_estimators": 300}
+2026-10-04 06:18:54 | 5               LSTM       0.8774     0.9238        4.5345      4.4939      0.9085    0.9101   5.2937           217.5143         157.5926             9.2487                             {"hidden_size": 32, "seq_len": 12}
+2026-10-04 06:18:56 | Total tuning time: 53.4 min
+2026-10-04 06:18:56 | PHASE 4 COMPLETE

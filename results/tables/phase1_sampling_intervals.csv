@@ -1,0 +1,5 @@
+Measure,Value
+Median interval (s),300.0
+Intervals within 300 s +/- 10 s (%),99.86914475895671
+Intervals longer than 10 min (%),0.05402280593530561
+Longest gap (hours),0.5833333333333334

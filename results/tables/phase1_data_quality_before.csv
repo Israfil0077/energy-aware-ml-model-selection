@@ -1,0 +1,25 @@
+Check,Count,% of rows
+Total rows,2663335,
+VMs loaded,300,
+Duplicate rows (all columns),103458,3.885
+"Duplicate (vm_id, timestamp) pairs",103511,3.887
+Missing: timestamp_ms,0,0.0
+Missing: cpu_cores,0,0.0
+Missing: cpu_capacity_provisioned_mhz,0,0.0
+Missing: cpu_usage_mhz,0,0.0
+Missing: cpu_usage_pct,0,0.0
+Missing: memory_provisioned_kb,0,0.0
+Missing: memory_usage_kb,0,0.0
+Missing: disk_read_kbps,0,0.0
+Missing: disk_write_kbps,0,0.0
+Missing: net_received_kbps,0,0.0
+Missing: net_transmitted_kbps,0,0.0
+Powered-off rows (cores = 0 and memory = 0),368862,13.85
+CPU% < 0,0,0.0
+CPU% > 100,71762,2.694
+Negative memory usage,0,0.0
+Negative memory provisioned,0,0.0
+Memory usage > provisioned,13206,0.496
+Memory provisioned = 0,368865,13.85
+CPU capacity provisioned <= 0,368944,13.853
+Negative disk/network values,0,0.0

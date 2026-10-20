@@ -1,0 +1,62 @@
+2026-10-04 06:51:11 | ======================================================================
+2026-10-04 06:51:11 | RUN STARTED 2026-10-04 06:51:11 | phase06_stability_testing
+2026-10-04 06:51:11 | python 3.13.15 | pandas 2.2.3 | numpy 2.1.3 | machine: Linux-6.6.122+-x86_64-with-glibc2.39
+2026-10-04 06:51:11 | project root: /content/drive/MyDrive/Green_ML_Project
+2026-10-04 06:51:11 | Seeds: [42, 7, 123, 2024, 99] | CPU cores: 2 | FORCE_RERUN = False
+2026-10-04 06:51:14 | Linear Regression: {}
+2026-10-04 06:51:14 | Decision Tree    : {'max_depth': 5, 'min_samples_split': 10}
+2026-10-04 06:51:14 | Random Forest    : {'max_depth': 10, 'n_estimators': 100}
+2026-10-04 06:51:14 | XGBoost          : {'learning_rate': 0.1, 'max_depth': 4, 'n_estimators': 300}
+2026-10-04 06:51:14 | LightGBM         : {'learning_rate': 0.05, 'max_depth': -1, 'n_estimators': 300}
+2026-10-04 06:51:14 | LSTM             : {'hidden_size': 32, 'seq_len': 12}
+2026-10-04 06:51:16 | seed   42 | Linear Regression | MAE 0.9032 | RMSE 4.5899 | R2 0.9062 | 1.7s
+2026-10-04 06:51:19 | seed   42 | Decision Tree     | MAE 1.0502 | RMSE 4.3561 | R2 0.9156 | 2.2s
+2026-10-04 06:54:49 | seed   42 | Random Forest     | MAE 0.6925 | RMSE 3.7283 | R2 0.9381 | 210.2s
+2026-10-04 06:54:55 | seed   42 | XGBoost           | MAE 0.6985 | RMSE 3.7456 | R2 0.9376 | 5.6s
+2026-10-04 06:55:08 | seed   42 | LightGBM          | MAE 0.6568 | RMSE 3.6543 | R2 0.9406 | 13.4s
+2026-10-04 06:58:14 | seed   42 | LSTM              | MAE 0.9238 | RMSE 4.4939 | R2 0.9101 | 185.7s
+2026-10-04 06:58:15 | seed    7 | Linear Regression | MAE 0.9032 | RMSE 4.5899 | R2 0.9062 | 0.3s
+2026-10-04 06:58:18 | seed    7 | Decision Tree     | MAE 1.0502 | RMSE 4.3561 | R2 0.9156 | 2.5s
+2026-10-04 07:01:47 | seed    7 | Random Forest     | MAE 0.6965 | RMSE 3.7280 | R2 0.9382 | 209.3s
+2026-10-04 07:01:53 | seed    7 | XGBoost           | MAE 0.6985 | RMSE 3.7456 | R2 0.9376 | 5.5s
+2026-10-04 07:02:03 | seed    7 | LightGBM          | MAE 0.6592 | RMSE 3.6342 | R2 0.9412 | 9.2s
+2026-10-04 07:04:15 | seed    7 | LSTM              | MAE 1.0440 | RMSE 4.5021 | R2 0.9098 | 131.7s
+2026-10-04 07:04:16 | seed  123 | Linear Regression | MAE 0.9032 | RMSE 4.5899 | R2 0.9062 | 0.3s
+2026-10-04 07:04:18 | seed  123 | Decision Tree     | MAE 1.0502 | RMSE 4.3561 | R2 0.9156 | 1.9s
+2026-10-04 07:07:43 | seed  123 | Random Forest     | MAE 0.6989 | RMSE 3.7382 | R2 0.9378 | 204.5s
+2026-10-04 07:07:51 | seed  123 | XGBoost           | MAE 0.6985 | RMSE 3.7456 | R2 0.9376 | 8.1s
+2026-10-04 07:07:58 | seed  123 | LightGBM          | MAE 0.6622 | RMSE 3.6432 | R2 0.9409 | 6.2s
+2026-10-04 07:10:33 | seed  123 | LSTM              | MAE 0.8915 | RMSE 4.4922 | R2 0.9102 | 155.0s
+2026-10-04 07:10:34 | seed 2024 | Linear Regression | MAE 0.9032 | RMSE 4.5899 | R2 0.9062 | 0.2s
+2026-10-04 07:10:36 | seed 2024 | Decision Tree     | MAE 1.0502 | RMSE 4.3561 | R2 0.9156 | 1.9s
+2026-10-04 07:13:55 | seed 2024 | Random Forest     | MAE 0.6947 | RMSE 3.7265 | R2 0.9382 | 198.0s
+2026-10-04 07:14:00 | seed 2024 | XGBoost           | MAE 0.6985 | RMSE 3.7456 | R2 0.9376 | 4.8s
+2026-10-04 07:14:07 | seed 2024 | LightGBM          | MAE 0.6626 | RMSE 3.6479 | R2 0.9408 | 7.0s
+2026-10-04 07:16:53 | seed 2024 | LSTM              | MAE 0.9464 | RMSE 4.5567 | R2 0.9076 | 165.7s
+2026-10-04 07:16:54 | seed   99 | Linear Regression | MAE 0.9032 | RMSE 4.5899 | R2 0.9062 | 0.3s
+2026-10-04 07:16:56 | seed   99 | Decision Tree     | MAE 1.0502 | RMSE 4.3561 | R2 0.9156 | 1.9s
+2026-10-04 07:20:18 | seed   99 | Random Forest     | MAE 0.7001 | RMSE 3.7248 | R2 0.9383 | 201.4s
+2026-10-04 07:20:23 | seed   99 | XGBoost           | MAE 0.6985 | RMSE 3.7456 | R2 0.9376 | 4.8s
+2026-10-04 07:20:32 | seed   99 | LightGBM          | MAE 0.6643 | RMSE 3.6379 | R2 0.9411 | 9.1s
+2026-10-04 07:22:19 | seed   99 | LSTM              | MAE 0.9035 | RMSE 4.6118 | R2 0.9053 | 106.8s
+2026-10-04 07:22:20 | --- STABILITY SUMMARY (5 seeds, tuned models, test set) ---
+2026-10-04 07:22:20 |                    MAE_mean   MAE_std  RMSE_mean  RMSE_std   R2_mean    R2_std  train_time_mean  MAE_cv_pct  RMSE_cv_pct
+2026-10-04 07:22:20 | model                                                                                                                   
+2026-10-04 07:22:20 | Linear Regression  0.903215  0.000000   4.589898  0.000000  0.906246  0.000000         0.565202    0.000000     0.000000
+2026-10-04 07:22:20 | Decision Tree      1.050245  0.000000   4.356144  0.000000  0.915553  0.000000         2.078687    0.000000     0.000000
+2026-10-04 07:22:20 | Random Forest      0.696531  0.003072   3.729142  0.005221  0.938113  0.000173       204.701118    0.440978     0.140002
+2026-10-04 07:22:20 | XGBoost            0.698472  0.000000   3.745565  0.000000  0.937567  0.000000         5.767296    0.000000     0.000000
+2026-10-04 07:22:20 | LightGBM           0.661013  0.002989   3.643508  0.007968  0.940922  0.000258         8.990417    0.452241     0.218698
+2026-10-04 07:22:20 | LSTM               0.941834  0.060823   4.531346  0.052211  0.908613  0.002114       148.987813    6.457923     1.152222
+2026-10-04 07:22:20 | Best two by mean MAE: LightGBM (0.6610) and Random Forest (0.6965)
+2026-10-04 07:22:20 | Gap = 0.0355; largest seed std of the two = 0.0031 -> gap is larger than 2x the seed noise
+2026-10-04 07:22:20 | --- MAE RANK OF EACH MODEL PER SEED (1 = best) ---
+2026-10-04 07:22:20 | model  Linear Regression  Decision Tree  Random Forest  XGBoost  LightGBM  LSTM
+2026-10-04 07:22:20 | seed                                                                           
+2026-10-04 07:22:20 | 7                      4              6              2        3         1     5
+2026-10-04 07:22:20 | 42                     4              6              2        3         1     5
+2026-10-04 07:22:20 | 99                     4              6              3        2         1     5
+2026-10-04 07:22:20 | 123                    5              6              3        2         1     4
+2026-10-04 07:22:20 | 2024                   4              6              2        3         1     5
+2026-10-04 07:22:20 | Ranking identical across all seeds: False
+2026-10-04 07:22:20 | PHASE 6 COMPLETE

@@ -1,0 +1,13 @@
+Check,Count
+"Duplicate (vm_id, timestamp) pairs",0
+Missing CPU/memory values,0
+Missing disk/network values,0
+Powered-off rows (cores = 0 and memory = 0),0
+CPU% < 0,0
+CPU% > 100,0
+Negative memory usage,0
+Negative memory provisioned,0
+Memory usage > provisioned,0
+Memory provisioned = 0,0
+CPU capacity provisioned <= 0,0
+Negative disk/network values,0

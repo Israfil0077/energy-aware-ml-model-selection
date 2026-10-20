@@ -1,0 +1,24 @@
+{
+  "features": [
+    "cpu_usage_pct",
+    "mem_usage_pct",
+    "cpu_cores",
+    "cpu_lag_1",
+    "cpu_lag_2",
+    "cpu_lag_3",
+    "mem_lag_1",
+    "mem_lag_2",
+    "mem_lag_3",
+    "cpu_roll_mean_6",
+    "cpu_roll_std_6",
+    "disk_read_kbps",
+    "disk_write_kbps",
+    "net_received_kbps",
+    "net_transmitted_kbps",
+    "hour",
+    "minute"
+  ],
+  "target": "target_cpu_next",
+  "n_train_vms": 50,
+  "n_gen_vms": 100
+}

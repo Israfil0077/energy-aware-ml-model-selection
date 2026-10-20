@@ -1,0 +1,22 @@
+\begin{table}[!htb]
+\centering
+\caption{Hyperparameter Search Spaces and Selected Settings}
+\label{tab:grids}
+\footnotesize
+\setlength{\tabcolsep}{4pt}
+\begin{adjustbox}{max width=\columnwidth}
+\begin{tabular}{lp{3.6cm}cp{2.3cm}r}
+\toprule
+Model & Search space & \# & Selected & Min \\
+\midrule
+DT & max\_depth $\in\{5,10,15,\infty\}$, min\_samples\_split $\in\{2,10,50\}$ & 12 & depth 5, split 10 & 1.9 \\
+RF & (n\_est.\,50, depth $\{10,20,\infty\}$); (100, $\{10,20\}$) & 5 & 100 trees, depth 10 & 37.0 \\
+XGB & n\_est. $\{100,300\}$, depth $\{4,6,8\}$, lr $\{0.05,0.1\}$ & 12 & 300, depth 4, lr 0.1 & 2.8 \\
+LGBM & n\_est. $\{100,300\}$, depth $\{4,8,\infty\}$, lr $\{0.05,0.1\}$ & 12 & 300, depth $\infty$, lr 0.05 & 2.4 \\
+LSTM & hidden $\{32,64\}$, history $\{6,12\}$ steps & 4 & hidden 32, history 12 & 9.2 \\
+\bottomrule
+\end{tabular}
+\end{adjustbox}
+\par\vspace{3pt}
+{\scriptsize Tree models: GridSearchCV with time-ordered TimeSeriesSplit (3 folds), RMSE criterion. LSTM: validation-based search with early stopping. Linear Regression has no hyperparameters.\par}
+\end{table}

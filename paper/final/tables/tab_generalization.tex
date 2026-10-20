@@ -1,0 +1,24 @@
+\begin{table}[!htb]
+\centering
+\caption{Generalization of the Tuned Models to 100 Unseen VMs}
+\label{tab:generalization}
+\footnotesize
+\setlength{\tabcolsep}{4pt}
+\begin{adjustbox}{max width=\columnwidth}
+\begin{tabular}{lrrrrrrr}
+\toprule
+Model & MAE$_{test}$ & MAE$_{unseen}$ & $\Delta$\% & RMSE & R$^2$ & Med. VM & Worst VM \\
+\midrule
+LR & 0.903 & 0.707 & -21.7 & 3.350 & 0.9612 & 0.258 & 5.3 \\
+DT & 1.050 & 1.581 & +50.6 & 5.805 & 0.8836 & 0.561 & 36.6 \\
+RF & 0.697 & 1.095 & +57.2 & 4.602 & 0.9269 & 0.182 & 29.7 \\
+XGB & 0.697 & 0.919 & +31.8 & 3.385 & 0.9604 & 0.192 & 10.5 \\
+LGBM & 0.664 & 1.083 & +63.0 & 4.476 & 0.9308 & 0.159 & 28.7 \\
+LSTM & 0.924 & 0.696 & -24.7 & 3.235 & 0.9639 & 0.255 & 5.0 \\
+\textit{Persist.} & 0.733 & 0.506 & -- & 3.315 & 0.9620 & -- & -- \\
+\bottomrule
+\end{tabular}
+\end{adjustbox}
+\par\vspace{3pt}
+{\scriptsize Med./Worst VM: median and maximum per-VM MAE over the 100 unseen VMs.\par}
+\end{table}

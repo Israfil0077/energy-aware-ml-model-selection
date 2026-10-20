@@ -1,0 +1,24 @@
+\begin{table}[!htb]
+\centering
+\caption{Data Cleaning Steps (300 Candidate VMs)}
+\label{tab:cleaning}
+\footnotesize
+\setlength{\tabcolsep}{4pt}
+\begin{adjustbox}{max width=\columnwidth}
+\begin{tabular}{cp{3.0cm}rrp{1.55cm}}
+\toprule
+\# & Rule & Rows removed & VMs & Note \\
+\midrule
+1 & Remove duplicate rows & 103,458 & 300 &  \\
+2 & Remove duplicate (vm\_id, timestamp) & 53 & 300 &  \\
+3 & Drop rows missing CPU/memory/timestamp & 0 & 300 &  \\
+4 & Fill missing disk/network with 0 & 0 & 300 & 0 cells filled \\
+5 & Exclude VMs powered off $>$ 10\% of time & 392,998 & 265 & 35 VMs excluded \\
+6 & Remove remaining powered-off rows & 725 & 265 &  \\
+7 & Cap CPU\% above 100 at 100 & 0 & 265 & 32,131 values capped \\
+8 & Remove other out-of-range values & 78 & 265 &  \\
+9 & Exclude VMs with $<$ 100 readings & 7 & 264 & 1 VMs excluded \\
+\bottomrule
+\end{tabular}
+\end{adjustbox}
+\end{table}

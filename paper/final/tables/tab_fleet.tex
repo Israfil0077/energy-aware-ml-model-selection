@@ -1,0 +1,28 @@
+\begin{table}[!htb]
+\centering
+\caption{Projected Annual Energy and CO$_2$ for a 10{,}000-VM Fleet}
+\label{tab:fleet}
+\footnotesize
+\setlength{\tabcolsep}{4pt}
+\begin{adjustbox}{max width=\columnwidth}
+\begin{tabular}{lrrrr}
+\toprule
+Variant & Train kWh & Infer. kWh & kg CO$_2$ & vs. min \\
+\midrule
+LR & 0.101 & 0.00029 & 0.0374 & 2$\times$ \\
+LR-A & 0.0497 & 0.00023 & 0.0185 & 1$\times$ \\
+DT & 0.512 & 0.00053 & 0.189 & 10$\times$ \\
+DT-A & 0.435 & 0.00021 & 0.161 & 9$\times$ \\
+RF & 66.9 & 0.019 & 24.7 & 1338$\times$ \\
+RF-A & 54.5 & 0.019 & 20.1 & 1091$\times$ \\
+XGB & 1.47 & 0.022 & 0.552 & 30$\times$ \\
+XGB-A & 1.23 & 0.026 & 0.465 & 25$\times$ \\
+LGBM & 2.64 & 0.03 & 0.987 & 53$\times$ \\
+LGBM-A & 1.7 & 0.031 & 0.64 & 35$\times$ \\
+LSTM & 45.9 & 0.063 & 17 & 919$\times$ \\
+\bottomrule
+\end{tabular}
+\end{adjustbox}
+\par\vspace{3pt}
+{\scriptsize Assumes 200 models (one per 50 VMs) retrained daily and one forecast per VM every 5 min ($1.05\times10^9$ predictions/yr); grid 0.369 kg/kWh; excludes data handling and facility overhead (PUE).\par}
+\end{table}

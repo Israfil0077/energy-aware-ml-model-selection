@@ -1,0 +1,44 @@
+2026-10-04 07:28:29 | ======================================================================
+2026-10-04 07:28:30 | RUN STARTED 2026-10-04 07:28:30 | phase08_sensitivity_analysis
+2026-10-04 07:28:30 | python 3.13.15 | pandas 2.2.3 | numpy 2.1.3 | machine: Linux-6.6.122+-x86_64-with-glibc2.39
+2026-10-04 07:28:30 | project root: /content/drive/MyDrive/Green_ML_Project
+2026-10-04 07:28:30 | Primary           : MAE=0.150, RMSE=0.150, MAPE=0.150, R2=0.200, train_time_sec=0.150, co2_emissions_kg=0.200
+2026-10-04 07:28:30 | Balanced          : MAE=0.167, RMSE=0.167, MAPE=0.167, R2=0.167, train_time_sec=0.167, co2_emissions_kg=0.167
+2026-10-04 07:28:30 | Accuracy-Priority : MAE=0.200, RMSE=0.200, MAPE=0.150, R2=0.250, train_time_sec=0.100, co2_emissions_kg=0.100
+2026-10-04 07:28:30 | Energy-Priority   : MAE=0.100, RMSE=0.100, MAPE=0.100, R2=0.100, train_time_sec=0.150, co2_emissions_kg=0.450
+2026-10-04 07:28:30 | Speed-Priority    : MAE=0.100, RMSE=0.100, MAPE=0.100, R2=0.100, train_time_sec=0.450, co2_emissions_kg=0.150
+2026-10-04 07:28:31 | --- CLOSENESS COEFFICIENT PER SCENARIO (higher is better) ---
+2026-10-04 07:28:31 |                    Primary  Balanced  Accuracy-Priority  Energy-Priority  Speed-Priority
+2026-10-04 07:28:31 | Model                                                                                   
+2026-10-04 07:28:31 | Linear Regression   0.8688    0.8499             0.7631           0.9492          0.9489
+2026-10-04 07:28:31 | Decision Tree       0.7620    0.7308             0.6234           0.9012          0.9004
+2026-10-04 07:28:31 | Random Forest       0.2201    0.2496             0.3548           0.0901          0.0905
+2026-10-04 07:28:31 | XGBoost             0.9683    0.9657             0.9564           0.9756          0.9706
+2026-10-04 07:28:31 | LightGBM            0.9652    0.9654             0.9686           0.9647          0.9617
+2026-10-04 07:28:31 | LSTM                0.2286    0.2382             0.2755           0.2013          0.1915
+2026-10-04 07:28:31 | --- RANK PER SCENARIO (1 = recommended) ---
+2026-10-04 07:28:31 |                    Primary  Balanced  Accuracy-Priority  Energy-Priority  Speed-Priority
+2026-10-04 07:28:31 | Model                                                                                   
+2026-10-04 07:28:31 | Linear Regression        3         3                  3                3               3
+2026-10-04 07:28:31 | Decision Tree            4         4                  4                4               4
+2026-10-04 07:28:31 | Random Forest            6         5                  5                6               6
+2026-10-04 07:28:31 | XGBoost                  1         1                  2                1               1
+2026-10-04 07:28:31 | LightGBM                 2         2                  1                2               2
+2026-10-04 07:28:31 | LSTM                     5         6                  6                5               5
+2026-10-04 07:28:31 | Primary           : recommended = XGBoost
+2026-10-04 07:28:31 | Balanced          : recommended = XGBoost
+2026-10-04 07:28:31 | Accuracy-Priority : recommended = LightGBM
+2026-10-04 07:28:31 | Energy-Priority   : recommended = XGBoost
+2026-10-04 07:28:31 | Speed-Priority    : recommended = XGBoost
+2026-10-04 07:28:31 | Same model recommended in every scenario: False
+2026-10-04 07:28:31 | Linear Regression: rank 3..3 across scenarios (moves 0 places) | ranks: {'Primary': 3, 'Balanced': 3, 'Accuracy-Priority': 3, 'Energy-Priority': 3, 'Speed-Priority': 3}
+2026-10-04 07:28:31 | Decision Tree    : rank 4..4 across scenarios (moves 0 places) | ranks: {'Primary': 4, 'Balanced': 4, 'Accuracy-Priority': 4, 'Energy-Priority': 4, 'Speed-Priority': 4}
+2026-10-04 07:28:31 | Random Forest    : rank 5..6 across scenarios (moves 1 places) | ranks: {'Primary': 6, 'Balanced': 5, 'Accuracy-Priority': 5, 'Energy-Priority': 6, 'Speed-Priority': 6}
+2026-10-04 07:28:31 | XGBoost          : rank 1..2 across scenarios (moves 1 places) | ranks: {'Primary': 1, 'Balanced': 1, 'Accuracy-Priority': 2, 'Energy-Priority': 1, 'Speed-Priority': 1}
+2026-10-04 07:28:31 | LightGBM         : rank 1..2 across scenarios (moves 1 places) | ranks: {'Primary': 2, 'Balanced': 2, 'Accuracy-Priority': 1, 'Energy-Priority': 2, 'Speed-Priority': 2}
+2026-10-04 07:28:31 | LSTM             : rank 5..6 across scenarios (moves 1 places) | ranks: {'Primary': 5, 'Balanced': 6, 'Accuracy-Priority': 6, 'Energy-Priority': 5, 'Speed-Priority': 5}
+2026-10-04 07:28:31 | LSTM ranks: {'Primary': 5, 'Balanced': 6, 'Accuracy-Priority': 6, 'Energy-Priority': 5, 'Speed-Priority': 5} -> best position 5 of 6
+2026-10-04 07:28:31 | From cost share 0% the winner is LightGBM
+2026-10-04 07:28:31 | From cost share 35% the winner is XGBoost
+2026-10-04 07:28:31 | From cost share 80% the winner is Linear Regression
+2026-10-04 07:28:31 | PHASE 8 COMPLETE

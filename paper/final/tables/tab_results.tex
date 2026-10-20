@@ -1,0 +1,24 @@
+\begin{table*}[!b]
+\centering
+\caption{Accuracy, Cost, Energy and TOPSIS Ranking of the Tuned Models (Test Set)}
+\label{tab:results}
+\footnotesize
+\setlength{\tabcolsep}{4pt}
+\begin{adjustbox}{max width=\textwidth}
+\begin{tabular}{lrrrrrrrrrr}
+\toprule
+Model & MAE & RMSE & MAPE\% & R$^2$ & Train s & Inf.\,ms/1k & Wh & g\,CO$_2$ & $C_i$ & Rank \\
+\midrule
+LR & 0.903 & 4.590 & 18.24 & 0.9062 & \textbf{0.253} & 0.286 & \textbf{0.0011} & \textbf{0.00041} & 0.869 & 3 \\
+DT & 1.050 & 4.356 & 28.07 & 0.9156 & 2.04 & \textbf{0.111} & 0.008 & 0.003 & 0.762 & 4 \\
+RF & 0.697 & 3.749 & 14.04 & 0.9374 & 195 & 3.46 & 0.95 & 0.35 & 0.220 & 6 \\
+XGB & 0.697 & 3.715 & 13.43 & 0.9386 & 5.92 & 4 & 0.022 & 0.0083 & \textbf{0.968} & 1 \\
+LGBM & \textbf{0.664} & \textbf{3.651} & \textbf{12.42} & \textbf{0.9407} & 7.82 & 6.94 & 0.034 & 0.013 & 0.965 & 2 \\
+LSTM & 0.924 & 4.494 & 19.74 & 0.9101 & 159 & 13.6 & 0.76 & 0.28 & 0.229 & 5 \\
+\textit{Persist.} & 0.733 & 4.657 & 13.92 & 0.9035 & 0 & -- & 0 & 0 & -- & -- \\
+\bottomrule
+\end{tabular}
+\end{adjustbox}
+\par\vspace{3pt}
+{\scriptsize Best value per column in bold. Energy and CO$_2$ are per training run (CodeCarbon; USA/Iowa grid, 0.369 kg/kWh). Inference time per 1{,}000 predictions. Persist.: persistence reference ($\hat{y}_{t+1}=y_t$), not ranked.\par}
+\end{table*}

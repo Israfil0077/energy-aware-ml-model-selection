@@ -1,0 +1,28 @@
+\begin{table}[!htb]
+\centering
+\caption{Full vs. VM-Agnostic Feature Sets}
+\label{tab:ablation}
+\footnotesize
+\setlength{\tabcolsep}{4pt}
+\begin{adjustbox}{max width=\columnwidth}
+\begin{tabular}{lrrrrrr}
+\toprule
+Model & Feat. & MAE$_{test}$ & MAE$_{unseen}$ & R$^2_{unseen}$ & Worst VM & VM 387 \\
+\midrule
+LR & 17 & 0.903 & 0.707 & 0.9612 & 5.27 & 2.38 \\
+LR-A & 12 & 0.899 & 0.645 & 0.9627 & 5.23 & 0.98 \\
+DT & 17 & 1.050 & 1.581 & 0.8836 & 36.63 & 36.63 \\
+DT-A & 12 & 0.973 & 1.055 & 0.9446 & 18.39 & 3.16 \\
+RF & 17 & 0.692 & 1.101 & 0.9246 & 30.38 & 30.38 \\
+RF-A & 12 & 0.734 & 0.873 & 0.9535 & 8.66 & 1.80 \\
+XGB & 17 & 0.698 & 0.837 & 0.9642 & 5.51 & 1.79 \\
+XGB-A & 12 & 0.746 & 0.739 & 0.9637 & 5.93 & 1.67 \\
+LGBM & 17 & 0.657 & 0.972 & 0.9234 & 34.68 & 34.68 \\
+LGBM-A & 12 & 0.720 & 0.681 & 0.9652 & 4.63 & 1.52 \\
+LSTM & 2 & 0.924 & 0.696 & 0.9639 & 5.01 & 1.06 \\
+\bottomrule
+\end{tabular}
+\end{adjustbox}
+\par\vspace{3pt}
+{\scriptsize -A: VM-agnostic variant (no core count, disk or network features). All variants retrained in one session with the Phase-4 tuned hyperparameters.\par}
+\end{table}

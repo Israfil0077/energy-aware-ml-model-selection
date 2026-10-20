@@ -1,0 +1,11 @@
+numpy
+pandas
+pyarrow
+scipy
+joblib
+matplotlib
+scikit-learn==1.6.1
+xgboost==3.4.1
+lightgbm==4.6.0
+torch==2.11.*
+codecarbon==3.3.1

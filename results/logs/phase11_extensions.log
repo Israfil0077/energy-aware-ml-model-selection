@@ -1,0 +1,106 @@
+2026-10-04 17:07:40 | ======================================================================
+2026-10-04 17:07:40 | RUN STARTED 2026-10-04 17:07:40 | phase11_extensions
+2026-10-04 17:07:40 | python 3.13.15 | pandas 2.2.3 | numpy 2.1.3 | machine: Linux-6.6.122+-x86_64-with-glibc2.39
+2026-10-04 17:07:40 | project root: /content/drive/MyDrive/Green_ML_Project
+2026-10-04 17:07:40 | CPU cores: 2 | FORCE_RERUN = False
+2026-10-04 17:07:40 | Fleet scenario: {'n_vms': 10000, 'vms_per_model': 50, 'retrains_per_day': 1, 'prediction_interval_min': 5, 'days': 365}
+2026-10-04 17:07:50 | Full feature set (17): ['cpu_usage_pct', 'mem_usage_pct', 'cpu_cores', 'cpu_lag_1', 'cpu_lag_2', 'cpu_lag_3', 'mem_lag_1', 'mem_lag_2', 'mem_lag_3', 'cpu_roll_mean_6', 'cpu_roll_std_6', 'disk_read_kbps', 'disk_write_kbps', 'net_received_kbps', 'net_transmitted_kbps', 'hour', 'minute']
+2026-10-04 17:07:50 | VM-agnostic set (12): ['cpu_usage_pct', 'mem_usage_pct', 'cpu_lag_1', 'cpu_lag_2', 'cpu_lag_3', 'mem_lag_1', 'mem_lag_2', 'mem_lag_3', 'cpu_roll_mean_6', 'cpu_roll_std_6', 'hour', 'minute']  | dropped: ['cpu_cores', 'disk_read_kbps', 'disk_write_kbps', 'net_received_kbps', 'net_transmitted_kbps']
+2026-10-04 17:07:51 | Test rows: 80,303 | unseen-VM rows: 815,778
+2026-10-04 17:08:29 | Linear Regression                | test MAE 0.9032 | unseen MAE 0.7069 (worst VM 5.27, VM387 2.38) | 0.30s x119 | 0.0014 Wh | 0.0005 g
+2026-10-04 17:08:58 | Decision Tree                    | test MAE 1.0502 | unseen MAE 1.5813 (worst VM 36.63, VM387 36.63) | 1.92s x15 | 0.0070 Wh | 0.0026 g
+2026-10-04 17:12:14 | Random Forest                    | test MAE 0.6925 | unseen MAE 1.1008 (worst VM 30.38, VM387 30.38) | 190.15s x1 | 0.9158 Wh | 0.3384 g
+2026-10-04 17:12:51 | XGBoost                          | test MAE 0.6985 | unseen MAE 0.8367 (worst VM 5.51, VM387 1.79) | 5.56s x6 | 0.0202 Wh | 0.0074 g
+2026-10-04 17:13:29 | LightGBM                         | test MAE 0.6568 | unseen MAE 0.9724 (worst VM 34.68, VM387 34.68) | 7.55s x4 | 0.0362 Wh | 0.0134 g
+2026-10-04 17:13:47 | Linear Regression (VM-agnostic)  | test MAE 0.8986 | unseen MAE 0.6453 (worst VM 5.23, VM387 0.98) | 0.15s x119 | 0.0007 Wh | 0.0003 g
+2026-10-04 17:14:12 | Decision Tree (VM-agnostic)      | test MAE 0.9735 | unseen MAE 1.0546 (worst VM 18.39, VM387 3.16) | 1.61s x15 | 0.0060 Wh | 0.0022 g
+2026-10-04 17:16:53 | Random Forest (VM-agnostic)      | test MAE 0.7336 | unseen MAE 0.8728 (worst VM 8.66, VM387 1.80) | 157.66s x1 | 0.7466 Wh | 0.2758 g
+2026-10-04 17:17:24 | XGBoost (VM-agnostic)            | test MAE 0.7457 | unseen MAE 0.7390 (worst VM 5.93, VM387 1.67) | 4.45s x6 | 0.0169 Wh | 0.0062 g
+2026-10-04 17:17:51 | LightGBM (VM-agnostic)           | test MAE 0.7203 | unseen MAE 0.6811 (worst VM 4.63, VM387 1.52) | 4.80s x4 | 0.0233 Wh | 0.0086 g
+2026-10-04 17:20:15 | LSTM | test MAE 0.9238 | unseen MAE 0.6959 | 131.4s | 0.6282 Wh | 0.2321 g
+2026-10-04 17:20:15 | Measurement context: Intel(R) Xeon(R) CPU @ 2.20GHz | United States (utah) | grid intensity 0.3695 kg/kWh (country USA (utah))
+2026-10-04 17:20:15 | Location lookups that disagreed with the session location (ignored): none
+2026-10-04 17:20:15 | Persistence on unseen VMs: MAE 0.5055 | RMSE 3.3154 | MAPE 12.4098 | R2 0.9620
+2026-10-04 17:20:15 | --- S1: FULL vs VM-AGNOSTIC FEATURES ---
+2026-10-04 17:20:15 |                               Model  Features  Test MAE  Test RMSE  Test R2  Unseen MAE  Unseen RMSE  Unseen R2  Median-VM MAE  Worst-VM MAE  VM387 MAE  Train time (s)  Train CO2 (g)
+2026-10-04 17:20:15 | 0                 Linear Regression        17    0.9032     4.5899   0.9062      0.7069       3.3503     0.9612         0.2583        5.2705     2.3798          0.2965         0.0005
+2026-10-04 17:20:15 | 1   Linear Regression (VM-agnostic)        12    0.8986     4.6567   0.9035      0.6453       3.2879     0.9627         0.2412        5.2284     0.9805          0.1499         0.0003
+2026-10-04 17:20:15 | 2                     Decision Tree        17    1.0502     4.3561   0.9156      1.5813       5.8048     0.8836         0.5613       36.6333    36.6333          1.9213         0.0026
+2026-10-04 17:20:15 | 3       Decision Tree (VM-agnostic)        12    0.9735     4.5121   0.9094      1.0546       4.0063     0.9446         0.3417       18.3864     3.1619          1.6058         0.0022
+2026-10-04 17:20:15 | 4                     Random Forest        17    0.6925     3.7283   0.9381      1.1008       4.6719     0.9246         0.1833       30.3841    30.3841        190.1453         0.3384
+2026-10-04 17:20:15 | 5       Random Forest (VM-agnostic)        12    0.7336     4.0561   0.9268      0.8728       3.6691     0.9535         0.1706        8.6574     1.7992        157.6633         0.2758
+2026-10-04 17:20:15 | 6                           XGBoost        17    0.6985     3.7456   0.9376      0.8367       3.2199     0.9642         0.1876        5.5146     1.7925          5.5554         0.0074
+2026-10-04 17:20:15 | 7             XGBoost (VM-agnostic)        12    0.7457     4.0468   0.9271      0.7390       3.2408     0.9637         0.1956        5.9286     1.6655          4.4512         0.0062
+2026-10-04 17:20:15 | 8                          LightGBM        17    0.6568     3.6543   0.9406      0.9724       4.7089     0.9234         0.1646       34.6819    34.6819          7.5509         0.0134
+2026-10-04 17:20:15 | 9            LightGBM (VM-agnostic)        12    0.7203     3.9609   0.9302      0.6811       3.1764     0.9652         0.1664        4.6335     1.5241          4.7974         0.0086
+2026-10-04 17:20:15 | 10                             LSTM         2    0.9238     4.4939   0.9101      0.6959       3.2350     0.9639         0.2546        5.0098     1.0589        131.3957         0.2321
+2026-10-04 17:20:16 | Linear Regression: unseen MAE 0.7069 -> 0.6453 (-8.7%) | test MAE 0.9032 -> 0.8986 (-0.5%) | worst VM 5.27 -> 5.23
+2026-10-04 17:20:16 | Decision Tree    : unseen MAE 1.5813 -> 1.0546 (-33.3%) | test MAE 1.0502 -> 0.9735 (-7.3%) | worst VM 36.63 -> 18.39
+2026-10-04 17:20:16 | Random Forest    : unseen MAE 1.1008 -> 0.8728 (-20.7%) | test MAE 0.6925 -> 0.7336 (+5.9%) | worst VM 30.38 -> 8.66
+2026-10-04 17:20:16 | XGBoost          : unseen MAE 0.8367 -> 0.7390 (-11.7%) | test MAE 0.6985 -> 0.7457 (+6.8%) | worst VM 5.51 -> 5.93
+2026-10-04 17:20:16 | LightGBM         : unseen MAE 0.9724 -> 0.6811 (-30.0%) | test MAE 0.6568 -> 0.7203 (+9.7%) | worst VM 34.68 -> 4.63
+2026-10-04 17:20:18 | Saved figure: fig_ablation_generalization.png / .pdf
+2026-10-04 17:20:21 | Linear Regression                inference: 0.061 ms / 1k | 0.0003 mWh / 1k | x500
+2026-10-04 17:20:23 | Linear Regression (VM-agnostic)  inference: 0.043 ms / 1k | 0.0002 mWh / 1k | x500
+2026-10-04 17:20:28 | Decision Tree                    inference: 0.101 ms / 1k | 0.0005 mWh / 1k | x500
+2026-10-04 17:20:30 | Decision Tree (VM-agnostic)      inference: 0.057 ms / 1k | 0.0002 mWh / 1k | x500
+2026-10-04 17:21:05 | Random Forest                    inference: 3.780 ms / 1k | 0.0181 mWh / 1k | x113
+2026-10-04 17:21:44 | Random Forest (VM-agnostic)      inference: 4.095 ms / 1k | 0.0185 mWh / 1k | x114
+2026-10-04 17:22:20 | XGBoost                          inference: 4.791 ms / 1k | 0.0208 mWh / 1k | x92
+2026-10-04 17:22:57 | XGBoost (VM-agnostic)            inference: 4.951 ms / 1k | 0.0243 mWh / 1k | x93
+2026-10-04 17:23:20 | LightGBM                         inference: 6.480 ms / 1k | 0.0288 mWh / 1k | x41
+2026-10-04 17:23:54 | LightGBM (VM-agnostic)           inference: 6.738 ms / 1k | 0.0300 mWh / 1k | x62
+2026-10-04 17:24:33 | LSTM                             inference: 12.421 ms / 1k | 0.0601 mWh / 1k | x38
+2026-10-04 17:24:33 | --- S2: STANDARD vs ROBUSTNESS-AWARE TOPSIS (11 variants) ---
+2026-10-04 17:24:33 |                               Model  Standard C  Standard rank  Robust C  Robust rank
+2026-10-04 17:24:33 | 9            LightGBM (VM-agnostic)      0.9600              3    0.9666            1
+2026-10-04 17:24:33 | 7             XGBoost (VM-agnostic)      0.9514              4    0.9529            2
+2026-10-04 17:24:33 | 6                           XGBoost      0.9685              1    0.9299            3
+2026-10-04 17:24:33 | 1   Linear Regression (VM-agnostic)      0.8854              5    0.9242            4
+2026-10-04 17:24:33 | 0                 Linear Regression      0.8843              6    0.9205            5
+2026-10-04 17:24:33 | 8                          LightGBM      0.9626              2    0.8858            6
+2026-10-04 17:24:33 | 3       Decision Tree (VM-agnostic)      0.8301              7    0.8312            7
+2026-10-04 17:24:33 | 2                     Decision Tree      0.7869              8    0.7144            8
+2026-10-04 17:24:33 | 10                             LSTM      0.3249              9    0.4014            9
+2026-10-04 17:24:33 | 5       Random Forest (VM-agnostic)      0.2620             10    0.3020           10
+2026-10-04 17:24:33 | 4                     Random Forest      0.1990             11    0.1950           11
+2026-10-04 17:24:34 | Standard winner: XGBoost | robustness-aware winner: LightGBM (VM-agnostic)
+2026-10-04 17:24:34 | Original 6 only -> standard ranks {'Linear Regression': 3, 'Decision Tree': 4, 'Random Forest': 6, 'XGBoost': 1, 'LightGBM': 2, 'LSTM': 5} | robust ranks {'Linear Regression': 2, 'Decision Tree': 4, 'Random Forest': 6, 'XGBoost': 1, 'LightGBM': 3, 'LSTM': 5}
+2026-10-04 17:24:34 | From unseen-MAE weight 0.00: winner = XGBoost
+2026-10-04 17:24:34 | From unseen-MAE weight 0.10: winner = LightGBM (VM-agnostic)
+2026-10-04 17:24:34 | From unseen-MAE weight 0.60: winner = Linear Regression (VM-agnostic)
+2026-10-04 17:24:34 | Saved figure: fig_topsis_robust_sweep.png / .pdf
+2026-10-04 17:24:35 | Correlation time vs CO2 (Phase 7 matrix): 0.9999
+2026-10-04 17:24:35 | Ranks identical whether cost = time+CO2, CO2 only, or time only: True
+2026-10-04 17:24:35 | --- S3a: MERGED COST CRITERION ---
+2026-10-04 17:24:35 |                Model  Primary (time 0.15 + CO2 0.20) C  Primary (time 0.15 + CO2 0.20) rank  CO2 only (0.35) C  CO2 only (0.35) rank  Time only (0.35) C  Time only (0.35) rank
+2026-10-04 17:24:35 | 0  Linear Regression                            0.8688                                    3             0.9022                     3              0.9016                      3
+2026-10-04 17:24:35 | 1      Decision Tree                            0.7620                                    4             0.8180                     4              0.8167                      4
+2026-10-04 17:24:35 | 2      Random Forest                            0.2201                                    6             0.1675                     6              0.1684                      6
+2026-10-04 17:24:35 | 3            XGBoost                            0.9683                                    1             0.9732                     1              0.9677                      1
+2026-10-04 17:24:35 | 4           LightGBM                            0.9652                                    2             0.9658                     2              0.9621                      2
+2026-10-04 17:24:35 | 5               LSTM                            0.2286                                    5             0.2167                     5              0.2058                      5
+2026-10-04 17:24:35 | Fleet: 200 models, 73,000 trainings/yr, 1,051,200,000 predictions/yr
+2026-10-04 17:24:35 | --- S3c: FLEET PROJECTION (10,000 VMs, daily retraining, 5-min forecasts, 1 year) ---
+2026-10-04 17:24:35 |                               Model  Training (kWh/yr)  Inference (kWh/yr)  Total (kWh/yr)  Total CO2 (kg/yr)  Inference share (%)  vs lowest (x)
+2026-10-04 17:24:35 | 0                 Linear Regression              0.101               0.000           0.101              0.037                0.289          2.027
+2026-10-04 17:24:35 | 1   Linear Regression (VM-agnostic)              0.050               0.000           0.050              0.018                0.456          1.000
+2026-10-04 17:24:35 | 2                     Decision Tree              0.512               0.001           0.513              0.189                0.103         10.260
+2026-10-04 17:24:35 | 3       Decision Tree (VM-agnostic)              0.435               0.000           0.435              0.161                0.048          8.703
+2026-10-04 17:24:35 | 4                     Random Forest             66.853               0.019          66.872             24.707                0.028       1338.341
+2026-10-04 17:24:35 | 5       Random Forest (VM-agnostic)             54.502               0.019          54.521             20.144                0.036       1091.165
+2026-10-04 17:24:35 | 6                           XGBoost              1.472               0.022           1.494              0.552                1.467         29.893
+2026-10-04 17:24:35 | 7             XGBoost (VM-agnostic)              1.233               0.026           1.259              0.465                2.030         25.196
+2026-10-04 17:24:36 | 8                          LightGBM              2.642               0.030           2.672              0.987                1.132         53.474
+2026-10-04 17:24:36 | 9            LightGBM (VM-agnostic)              1.700               0.031           1.732              0.640                1.819         34.659
+2026-10-04 17:24:36 | 10                             LSTM             45.861               0.063          45.925             16.968                0.138        919.113
+2026-10-04 17:24:37 | Saved figure: fig_fleet_projection.png / .pdf
+2026-10-04 17:24:37 | --- S4: SIGNIFICANCE TESTS (A vs B; DM stat < 0 means A has smaller errors) ---
+2026-10-04 17:24:37 |                      Comparison              Data  MAE XGB  MAE LGBM  VMs where A better  Wilcoxon p  Paired t p  DM stat  DM p  MAE LSTM  MAE LR
+2026-10-04 17:24:37 | 0           XGBoost vs LightGBM     test (50 VMs)   0.6985    0.6568                  23      0.0772      0.0053  10.1038   0.0       NaN     NaN
+2026-10-04 17:24:37 | 1           XGBoost vs LightGBM  unseen (100 VMs)   0.8367    0.9724                  29      0.0000      0.7060  -9.4917   0.0       NaN     NaN
+2026-10-04 17:24:37 | 2              LightGBM vs LSTM     test (50 VMs)      NaN    0.6568                  46      0.0000      0.0009 -16.9013   0.0    0.9238     NaN
+2026-10-04 17:24:37 | 3              LightGBM vs LSTM  unseen (100 VMs)      NaN    0.9724                  80      0.0000      0.4580  18.8680   0.0    0.6959     NaN
+2026-10-04 17:24:37 | 4  XGBoost vs Linear Regression     test (50 VMs)   0.6985       NaN                  44      0.0000      0.0061 -13.3047   0.0       NaN  0.9032
+2026-10-04 17:24:37 | 5  XGBoost vs Linear Regression  unseen (100 VMs)   0.8367       NaN                  68      0.0813      0.1357  22.5828   0.0       NaN  0.7069
+2026-10-04 17:24:38 | PHASE 11 EXTENSIONS COMPLETE

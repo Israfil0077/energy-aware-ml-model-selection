@@ -1,0 +1,23 @@
+\begin{table}[!htb]
+\centering
+\caption{Effect and Cost of Hyperparameter Tuning (Test Set)}
+\label{tab:tuning}
+\footnotesize
+\setlength{\tabcolsep}{4pt}
+\begin{adjustbox}{max width=\columnwidth}
+\begin{tabular}{lrrrrrrr}
+\toprule
+Model & MAE$_{def}$ & MAE$_{tun}$ & $\Delta$\% & RMSE$_{def}$ & RMSE$_{tun}$ & Min & Wh \\
+\midrule
+LR & 0.903 & 0.903 & +0.0 & 4.590 & 4.590 & 0.0 & -- \\
+DT & 0.847 & 1.050 & +24.0 & 5.247 & 4.356 & 1.9 & 0.46 \\
+RF & 0.690 & 0.697 & +0.9 & 3.685 & 3.749 & 37.0 & 11 \\
+XGB & 0.701 & 0.697 & -0.5 & 3.738 & 3.715 & 2.8 & 0.64 \\
+LGBM & 0.674 & 0.664 & -1.5 & 3.712 & 3.651 & 2.4 & 0.63 \\
+LSTM & 0.877 & 0.924 & +5.3 & 4.534 & 4.494 & 9.2 & 2.7 \\
+\bottomrule
+\end{tabular}
+\end{adjustbox}
+\par\vspace{3pt}
+{\scriptsize Wh: estimated tuning energy = tuning time $\times$ measured mean power of that model.\par}
+\end{table}

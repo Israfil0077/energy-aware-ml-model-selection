@@ -1,0 +1,28 @@
+\begin{table}[!htb]
+\centering
+\caption{Standard vs. Robustness-Aware TOPSIS (11 Variants)}
+\label{tab:robust}
+\footnotesize
+\setlength{\tabcolsep}{4pt}
+\begin{adjustbox}{max width=\columnwidth}
+\begin{tabular}{lrrrr}
+\toprule
+Variant & $C_i$ std. & Rank & $C_i$ robust & Rank \\
+\midrule
+LGBM-A & 0.960 & 3 & 0.967 & 1 \\
+XGB-A & 0.951 & 4 & 0.953 & 2 \\
+XGB & 0.969 & 1 & 0.930 & 3 \\
+LR-A & 0.885 & 5 & 0.924 & 4 \\
+LR & 0.884 & 6 & 0.920 & 5 \\
+LGBM & 0.963 & 2 & 0.886 & 6 \\
+DT-A & 0.830 & 7 & 0.831 & 7 \\
+DT & 0.787 & 8 & 0.714 & 8 \\
+LSTM & 0.325 & 9 & 0.401 & 9 \\
+RF-A & 0.262 & 10 & 0.302 & 10 \\
+RF & 0.199 & 11 & 0.195 & 11 \\
+\bottomrule
+\end{tabular}
+\end{adjustbox}
+\par\vspace{3pt}
+{\scriptsize Robust weights: MAE .10, RMSE .10, MAPE .10, R$^2$ .15, unseen MAE .20, training time .15, CO$_2$ .20.\par}
+\end{table}

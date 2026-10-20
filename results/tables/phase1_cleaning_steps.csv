@@ -1,0 +1,10 @@
+Step,Rule,Rows before,Rows after,Rows removed,VMs after,Note
+1,Remove duplicate rows,2663335,2559877,103458,300,
+2,"Remove duplicate (vm_id, timestamp)",2559877,2559824,53,300,
+3,Drop rows missing CPU/memory/timestamp,2559824,2559824,0,300,
+4,Fill missing disk/network with 0,2559824,2559824,0,300,0 cells filled
+5,Exclude VMs powered off > 10% of time,2559824,2166826,392998,265,35 VMs excluded
+6,Remove remaining powered-off rows,2166826,2166101,725,265,
+7,Cap CPU% above 100 at 100,2166101,2166101,0,265,"32,131 values capped (1.48% of rows)"
+8,Remove other out-of-range values,2166101,2166023,78,265,
+9,Exclude VMs with < 100 readings,2166023,2166016,7,264,1 VMs excluded [674]

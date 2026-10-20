@@ -1,0 +1,19 @@
+Feature,Group,Description
+cpu_usage_pct,Current,CPU usage at t (%)
+mem_usage_pct,Current,Memory usage at t (% of provisioned)
+cpu_cores,Static,Provisioned virtual CPU cores
+cpu_lag_1,Lag,CPU usage at t-1 (%)
+cpu_lag_2,Lag,CPU usage at t-2 (%)
+cpu_lag_3,Lag,CPU usage at t-3 (%)
+mem_lag_1,Lag,Memory usage at t-1 (%)
+mem_lag_2,Lag,Memory usage at t-2 (%)
+mem_lag_3,Lag,Memory usage at t-3 (%)
+cpu_roll_mean_6,Rolling,Mean CPU over t-5..t
+cpu_roll_std_6,Rolling,Std. dev. of CPU over t-5..t
+disk_read_kbps,I/O,Disk read throughput at t (KB/s)
+disk_write_kbps,I/O,Disk write throughput at t (KB/s)
+net_received_kbps,I/O,Network received at t (KB/s)
+net_transmitted_kbps,I/O,Network transmitted at t (KB/s)
+hour,Calendar,Hour of day of t
+minute,Calendar,Minute of hour of t
+target_cpu_next,Target,"CPU usage at t+1 (%), the value predicted"

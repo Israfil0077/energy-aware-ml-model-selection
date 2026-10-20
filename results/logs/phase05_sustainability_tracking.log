@@ -1,0 +1,79 @@
+2026-10-04 06:24:20 | ======================================================================
+2026-10-04 06:24:20 | RUN STARTED 2026-10-04 06:24:20 | phase05_sustainability_tracking
+2026-10-04 06:24:20 | python 3.13.15 | pandas 2.2.3 | numpy 2.1.3 | machine: Linux-6.6.122+-x86_64-with-glibc2.39
+2026-10-04 06:24:20 | project root: /content/drive/MyDrive/Green_ML_Project
+2026-10-04 06:24:20 | codecarbon 3.3.1 | CPU cores: 2 | FORCE_RERUN = False
+2026-10-04 06:24:23 | Linear Regression default params={}  (expected train time ~0.3s)
+2026-10-04 06:24:23 | Linear Regression tuned   params={}  (expected train time ~0.3s)
+2026-10-04 06:24:23 | Decision Tree     default params={}  (expected train time ~11.5s)
+2026-10-04 06:24:23 | Decision Tree     tuned   params={'max_depth': 5, 'min_samples_split': 10}  (expected train time ~3.0s)
+2026-10-04 06:24:23 | Random Forest     default params={}  (expected train time ~611.5s)
+2026-10-04 06:24:23 | Random Forest     tuned   params={'max_depth': 10, 'n_estimators': 100}  (expected train time ~233.0s)
+2026-10-04 06:24:23 | XGBoost           default params={}  (expected train time ~3.2s)
+2026-10-04 06:24:23 | XGBoost           tuned   params={'learning_rate': 0.1, 'max_depth': 4, 'n_estimators': 300}  (expected train time ~5.7s)
+2026-10-04 06:24:23 | LightGBM          default params={}  (expected train time ~2.3s)
+2026-10-04 06:24:23 | LightGBM          tuned   params={'learning_rate': 0.05, 'max_depth': -1, 'n_estimators': 300}  (expected train time ~9.1s)
+2026-10-04 06:24:23 | LSTM              default params={}  (expected train time ~217.5s)
+2026-10-04 06:24:23 | LSTM              tuned   params={'hidden_size': 32, 'seq_len': 12}  (expected train time ~157.6s)
+2026-10-04 06:24:23 | Linear Regression | tuned: measuring ...
+2026-10-04 06:24:48 | Linear Regression | tuned: 0.25s per training (x90) | 1.102e-06 kWh | 4.071e-07 kg CO2 | CPU 5.4 W, RAM 10.0 W
+2026-10-04 06:24:48 | Decision Tree | tuned: measuring ...
+2026-10-04 06:25:10 | Decision Tree | tuned: 2.04s per training (x11) | 7.996e-06 kWh | 2.954e-06 kg CO2 | CPU 4.2 W, RAM 10.0 W
+2026-10-04 06:25:10 | Random Forest | tuned: measuring ...
+2026-10-04 06:28:25 | Random Forest | tuned: 194.82s per training (x1) | 9.458e-04 kWh | 3.495e-04 kg CO2 | CPU 7.5 W, RAM 10.0 W
+2026-10-04 06:28:25 | XGBoost | tuned: measuring ...
+2026-10-04 06:29:01 | XGBoost | tuned: 5.92s per training (x6) | 2.247e-05 kWh | 8.303e-06 kg CO2 | CPU 3.6 W, RAM 10.0 W
+2026-10-04 06:29:01 | LightGBM | tuned: measuring ...
+2026-10-04 06:29:33 | LightGBM | tuned: 7.82s per training (x4) | 3.424e-05 kWh | 1.265e-05 kg CO2 | CPU 5.6 W, RAM 10.0 W
+2026-10-04 06:29:33 | LSTM | tuned: measuring ...
+2026-10-04 06:32:12 | LSTM | tuned: 158.91s per training (x1) | 7.593e-04 kWh | 2.805e-04 kg CO2 | CPU 7.2 W, RAM 10.0 W
+2026-10-04 06:32:12 | Linear Regression | default: measuring ...
+2026-10-04 06:32:33 | Linear Regression | default: 0.23s per training (x90) | 1.050e-06 kWh | 3.880e-07 kg CO2 | CPU 6.1 W, RAM 10.0 W
+2026-10-04 06:32:33 | Decision Tree | default: measuring ...
+2026-10-04 06:33:10 | Decision Tree | default: 12.10s per training (x3) | 4.895e-05 kWh | 1.809e-05 kg CO2 | CPU 4.7 W, RAM 10.0 W
+2026-10-04 06:33:10 | Random Forest | default: measuring ...
+2026-10-04 06:43:09 | Random Forest | default: 598.78s per training (x1) | 2.962e-03 kWh | 1.094e-03 kg CO2 | CPU 7.8 W, RAM 10.0 W
+2026-10-04 06:43:09 | XGBoost | default: measuring ...
+2026-10-04 06:43:45 | XGBoost | default: 3.57s per training (x10) | 1.736e-05 kWh | 6.414e-06 kg CO2 | CPU 7.5 W, RAM 10.0 W
+2026-10-04 06:43:45 | LightGBM | default: measuring ...
+2026-10-04 06:44:21 | LightGBM | default: 2.74s per training (x13) | 1.153e-05 kWh | 4.261e-06 kg CO2 | CPU 5.1 W, RAM 10.0 W
+2026-10-04 06:44:21 | LSTM | default: measuring ...
+2026-10-04 06:47:53 | LSTM | default: 211.87s per training (x1) | 1.009e-03 kWh | 3.727e-04 kg CO2 | CPU 7.1 W, RAM 10.0 W
+2026-10-04 06:47:53 | --- MEASUREMENT CONTEXT (for the paper) ---
+2026-10-04 06:47:53 | cpu_model                   : Intel(R) Xeon(R) CPU @ 2.20GHz
+2026-10-04 06:47:53 | cpu_count                   : 2
+2026-10-04 06:47:54 | tracking_mode               : machine
+2026-10-04 06:47:54 | country                     : United States
+2026-10-04 06:47:54 | region                      : iowa
+2026-10-04 06:47:54 | cloud_provider              : 
+2026-10-04 06:47:54 | cloud_region                : 
+2026-10-04 06:47:54 | carbon_intensity_kg_per_kwh : 0.369473
+2026-10-04 06:47:54 | carbon_intensity_source     : country USA (iowa)
+2026-10-04 06:47:54 | avg_cpu_power_w             : 5.449309692747825
+2026-10-04 06:47:54 | avg_ram_power_w             : 10.0
+2026-10-04 06:47:54 | codecarbon_version          : 3.3.1
+2026-10-04 06:47:54 | --- TABLE 1: ENERGY AND CO2 PER TRAINING RUN (tuned models) ---
+2026-10-04 06:47:54 |                Model  Train time (s)  Energy (kWh)      CO2 (kg)   CO2 (g)  Avg power (W)  Repeats measured
+2026-10-04 06:47:54 | 0  Linear Regression        0.253325      0.000001  4.070639e-07  0.000407      15.656843                90
+2026-10-04 06:47:54 | 1      Decision Tree        2.041978      0.000008  2.954204e-06  0.002954      14.096435                11
+2026-10-04 06:47:54 | 2      Random Forest      194.818086      0.000946  3.494571e-04  0.349457      17.477702                 1
+2026-10-04 06:47:54 | 3            XGBoost        5.920081      0.000022  8.302546e-06  0.008303      13.664804                 6
+2026-10-04 06:47:54 | 4           LightGBM        7.819682      0.000034  1.265218e-05  0.012652      15.765074                 4
+2026-10-04 06:47:54 | 5               LSTM      158.907845      0.000759  2.805359e-04  0.280536      17.201364                 1
+2026-10-04 06:47:54 | --- TABLE 2: DEFAULT vs TUNED TRAINING ENERGY ---
+2026-10-04 06:47:54 |                Model  Default energy (kWh)  Tuned energy (kWh)  Default CO2 (g)  Tuned CO2 (g)  Energy change (%)
+2026-10-04 06:47:54 | 0  Linear Regression              0.000001            0.000001         0.000388       0.000407           4.922480
+2026-10-04 06:47:54 | 1      Decision Tree              0.000049            0.000008         0.018085       0.002954         -83.665241
+2026-10-04 06:47:54 | 2      Random Forest              0.002962            0.000946         1.094485       0.349457         -68.071094
+2026-10-04 06:47:54 | 3            XGBoost              0.000017            0.000022         0.006414       0.008303          29.444837
+2026-10-04 06:47:54 | 4           LightGBM              0.000012            0.000034         0.004261       0.012652         196.896751
+2026-10-04 06:47:54 | 5               LSTM              0.001009            0.000759         0.372740       0.280536         -24.736795
+2026-10-04 06:47:55 | --- TABLE 3: ESTIMATED ENERGY OF THE TUNING SEARCH (Phase 4) ---
+2026-10-04 06:47:55 |                Model  Tuning time (min)  Est. tuning energy (kWh)  Est. tuning CO2 (g)  Tuning / one training (x)
+2026-10-04 06:47:55 | 0  Linear Regression           0.000000                  0.000000             0.000000                   0.000000
+2026-10-04 06:47:55 | 1      Decision Tree           1.944217                  0.000457             0.168766                  57.127468
+2026-10-04 06:47:55 | 2      Random Forest          37.025851                  0.010785             3.984931                  11.403208
+2026-10-04 06:47:55 | 3            XGBoost           2.790405                  0.000636             0.234802                  28.280744
+2026-10-04 06:47:55 | 4           LightGBM           2.387443                  0.000627             0.231772                  18.318723
+2026-10-04 06:47:55 | 5               LSTM           9.248740                  0.002652             0.979663                   3.492115
+2026-10-04 06:47:55 | PHASE 5 COMPLETE
