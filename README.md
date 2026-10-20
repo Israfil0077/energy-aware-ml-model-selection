@@ -4,7 +4,7 @@
 
 **Choosing a VM load-forecasting model by accuracy, cost, energy, carbon *and* robustness, not by accuracy alone.**
 
-[![Paper](https://img.shields.io/badge/Paper-PDF-b31b1b)](paper/Energy_Aware_ML_Model_Selection_Paper.pdf)
+[![Paper](https://img.shields.io/badge/Paper-read%20online-b31b1b)](paper/README.md)
 [![Python](https://img.shields.io/badge/Python-3.13-3776AB?logo=python&logoColor=white)](requirements.txt)
 [![Colab](https://img.shields.io/badge/Runs%20on-free%20Google%20Colab%20(CPU)-F9AB00?logo=googlecolab&logoColor=white)](#reproducing-the-results)
 [![Dataset](https://img.shields.io/badge/Data-GWA--T--12%20Bitbrains-2f5d8a)](http://gwa.ewi.tudelft.nl/datasets/gwa-t-12-bitbrains)
@@ -14,7 +14,7 @@ Md. Israfil Hossain · Ashiq Anzum · Navia Ferdous Nowrin · Naimur Rahman Naye
 Department of Computer Science and Engineering, United International University, Dhaka, Bangladesh<br>
 Course: EEE 4261 (E): Green Computing
 
-**[Read the paper (PDF)](paper/Energy_Aware_ML_Model_Selection_Paper.pdf)**
+**[Read the paper online](paper/README.md)** · **[Download the PDF](https://github.com/Israfil0077/energy-aware-ml-model-selection/raw/main/paper/Energy_Aware_ML_Model_Selection_Paper.pdf)**
 
 </div>
 
@@ -117,6 +117,7 @@ so the same VMs and features can be rebuilt.
 │   └── logs/             # run logs and raw CodeCarbon measurements
 ├── paper/
 │   ├── Energy_Aware_ML_Model_Selection_Paper.pdf
+│   ├── README.md         # the paper as page images, readable on GitHub
 │   ├── final/            # LaTeX source (IEEE format), figures, tables, references.bib
 │   └── literature_review/
 ├── data/processed/       # VM selection and feature list (raw data not included)
