@@ -16,6 +16,8 @@ Course: EEE 4261 (E): Green Computing
 
 **[Read the paper (PDF)](paper/Energy_Aware_ML_Model_Selection_Paper.pdf)**
 
+<img src="docs/images/thumbnail.jpg" alt="Energy-Aware ML Model Selection: TOPSIS ranking and key findings" width="760">
+
 </div>
 
 ---
